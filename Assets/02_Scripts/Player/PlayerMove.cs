@@ -28,12 +28,16 @@ public class PlayerMove : MonoBehaviour
         // }
         
         // ---
-
-        float h = Input.GetAxis("Horizontal");  // 키보드 왼/오른쪽 입력 상태에 따라 -1f ~ 0 ~ 1f
-        float v = Input.GetAxis("Vertical");    // 키보드 위/아래쪽 입력 상태에 따라 -1f ~ 0 ~ 1f
+        
+        // GetAxis : ("Horizontal") 키보드 왼/오른쪽 입력 상태에 따라 -1f ~ 0 ~ 1f
+        //           ("Vertical") 키보드 위/아래쪽 입력 상태에 따라 -1f ~ 0 ~ 1f
+        // GetAxisRaw : -1, 0, 1 중으로 값이 정해진다.
+        float h = Input.GetAxisRaw("Horizontal");
+        float v = Input.GetAxisRaw("Vertical");
         Debug.Log($"h:{h}, v:{v}");
         Vector2 direction = new Vector2(h, v);
-        transform.Translate(direction * Speed * Time.deltaTime);
+        Vector2 normalizedSpeed = (direction * Speed).normalized; // normalized : 벡터의 길이를 1로 만들어주는 것 (즉, 방향만 유지한다.)
+        transform.Translate(direction * normalizedSpeed * Time.deltaTime);
         
         // 새로운 위치 = 현재 위치 + 거리(방향 * 속력 * 시간)
         // transform.position += (Vector3)direction * Speed * Time.deltaTime;
