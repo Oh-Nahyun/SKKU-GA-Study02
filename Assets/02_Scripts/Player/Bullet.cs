@@ -2,10 +2,13 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    // 목적 : 총알을 위로 움직이고 싶다.
+    
     public float Speed;
 
     private void Update()
     {
-        transform.position += (Vector3)Vector2.up * Speed * Time.deltaTime;
+        Vector2 direction = Vector2.up; // new Vector(1, 0);
+        transform.Translate(direction * Speed * Time.deltaTime);
     }
 }
