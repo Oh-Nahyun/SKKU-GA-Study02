@@ -9,6 +9,7 @@ public class PlayerFire : MonoBehaviour
     public GameObject BulletFrontPrefab;
     public GameObject BulletBackPrefab;
     // - 생성 위치(총구)
+    // public Transform[] ...;
     public Transform FirePointFrontLeft;
     public Transform FirePointFrontRight;
     public Transform FirePointBackLeft;
@@ -59,7 +60,7 @@ public class PlayerFire : MonoBehaviour
 
     private void ChangeMode()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad1))
+        if (Input.GetKeyDown(KeyCode.Keypad1)) // Input.GetKeyDown(KeyCode.Alpha1)
         {
             isAutoMode = (isAutoMode) ? false : true;
         }
