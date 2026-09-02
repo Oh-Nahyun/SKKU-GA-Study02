@@ -4,7 +4,11 @@ public class PlayerMove : MonoBehaviour
 {
     // 목적 : 키보드 입력에 따라서 플레이어 이동 처리를 하고 싶다.
 
-    public float Speed = 0.05f;
+    public float Speed;
+    public float MaxPositionY;
+    public float MinPositionY;
+    public float MaxPositionX;
+    public float MinPositionX;
     
     // 매 프레임마다 실행된다.
     // 초당 프레임 실행 횟수는 별다른 설정이 없을 경우, 가능한 많이 실행된다.
@@ -28,53 +32,53 @@ public class PlayerMove : MonoBehaviour
         // }
         
         // ---
-
-        if (Input.GetKey(KeyCode.E))
-        {
-            // [실습 3-1] 키보드 E키를 누르면 스피드 Up!
-            Speed++;
-            Debug.Log($"Speed 증가 : {Speed}");
-        }
-        else if (Input.GetKey(KeyCode.Q))
-        {
-            // [실습 3-2] 키보드 Q키를 누르면 스피드 Down!
-            Speed--;
-            Debug.Log($"Speed 감소 : {Speed}");
-        }
         
         // GetAxis : ("Horizontal") 키보드 왼/오른쪽 입력 상태에 따라 -1f ~ 0 ~ 1f
         //           ("Vertical") 키보드 위/아래쪽 입력 상태에 따라 -1f ~ 0 ~ 1f
         // GetAxisRaw : -1, 0, 1 중으로 값이 정해진다.
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
-        Vector2 direction = new Vector2(h, v);
+        
+        // normalized : 벡터의 길이를 1로 만들어주는 것 (즉, 방향만 유지한다.)
+        Vector2 normalizedDirection = new Vector2(h, v).normalized;
+        Vector2 newPosition = transform.position + (Vector3)normalizedDirection * Speed * Time.deltaTime;
         //Debug.Log($"h:{h}, v:{v}");
         
         // [실습 1] 이미지와 같이 빨간색 영역 안에서만 캐릭터가 이동할 수 있게 구현
-        if (direction.y <= 0 && transform.position.y <= -5.0f)
+        if (newPosition.y > MaxPositionY)
         {
-            direction.y = 0;
+            newPosition.y = MaxPositionY;
         }
-        if (direction.y >= 0 && transform.position.y >= -3.0f)
+        else if (newPosition.y < MinPositionY)
         {
-            direction.y = 0;
+            newPosition.y = MinPositionY;
         }
 
         // [실습 2] 좌우 이동에 있어 한쪽으로 쭈욱 이동하면 반대쪽에서 나오게 구현
-        if (direction.x <= 0 && transform.position.x <= -2.0f)
+        if (newPosition.x > MaxPositionX)
         {
-            transform.position = new Vector3(- transform.position.x, transform.position.y, 0);
+            newPosition.x = MinPositionY;
         }
-        if (direction.x >= 0 && transform.position.x >= 2.0f)
+        else if (newPosition.x < MinPositionX)
         {
-            transform.position = new Vector3(- transform.position.x, transform.position.y, 0);
+            newPosition.x = MaxPositionX;
         }
         
-        // normalized : 벡터의 길이를 1로 만들어주는 것 (즉, 방향만 유지한다.)
-        // Vector2 normalizedSpeed = (direction * Speed).normalized;
-        // transform.Translate(direction * normalizedSpeed * Time.deltaTime);
-        
-        // 새로운 위치 = 현재 위치 + 거리(방향 * 속력 * 시간)
-        transform.position += (Vector3)direction * Speed * Time.deltaTime;
+        // transform.Translate(normalizedSpeed * Time.deltaTime);
+        transform.position = newPosition; // 새로운 위치 = 현재 위치 + 거리(방향 * 속력 * 시간)
+
+        // [실습 3] 스피드 증가/감소 기능 구현
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            // 키보드 E키를 누르면 스피드 Up!
+            Speed++;
+            Debug.Log($"Speed 증가 : {Speed}");
+        }
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
+            // 키보드 Q키를 누르면 스피드 Down!
+            Speed--;
+            Debug.Log($"Speed 감소 : {Speed}");
+        }
     }
 }
