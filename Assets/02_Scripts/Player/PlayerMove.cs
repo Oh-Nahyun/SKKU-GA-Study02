@@ -46,6 +46,16 @@ public class PlayerMove : MonoBehaviour
         {
             direction.y = 0;
         }
+
+        // [실습 2] 좌우 이동에 있어 한쪽으로 쭈욱 이동하면 반대쪽에서 나오게 구현
+        if (direction.x <= 0 && transform.position.x <= -2.0f)
+        {
+            transform.position = new Vector3(- transform.position.x, transform.position.y, 0);
+        }
+        if (direction.x >= 0 && transform.position.x >= 2.0f)
+        {
+            transform.position = new Vector3(- transform.position.x, transform.position.y, 0);
+        }
         
         // normalized : 벡터의 길이를 1로 만들어주는 것 (즉, 방향만 유지한다.)
         // Vector2 normalizedSpeed = (direction * Speed).normalized;
