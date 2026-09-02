@@ -28,6 +28,19 @@ public class PlayerMove : MonoBehaviour
         // }
         
         // ---
+
+        if (Input.GetKey(KeyCode.E))
+        {
+            // [실습 3-1] 키보드 E키를 누르면 스피드 Up!
+            Speed++;
+            Debug.Log($"Speed 증가 : {Speed}");
+        }
+        else if (Input.GetKey(KeyCode.Q))
+        {
+            // [실습 3-2] 키보드 Q키를 누르면 스피드 Down!
+            Speed--;
+            Debug.Log($"Speed 감소 : {Speed}");
+        }
         
         // GetAxis : ("Horizontal") 키보드 왼/오른쪽 입력 상태에 따라 -1f ~ 0 ~ 1f
         //           ("Vertical") 키보드 위/아래쪽 입력 상태에 따라 -1f ~ 0 ~ 1f
