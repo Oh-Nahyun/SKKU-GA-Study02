@@ -34,12 +34,24 @@ public class PlayerMove : MonoBehaviour
         // GetAxisRaw : -1, 0, 1 중으로 값이 정해진다.
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
-        Debug.Log($"h:{h}, v:{v}");
         Vector2 direction = new Vector2(h, v);
-        Vector2 normalizedSpeed = (direction * Speed).normalized; // normalized : 벡터의 길이를 1로 만들어주는 것 (즉, 방향만 유지한다.)
-        transform.Translate(direction * normalizedSpeed * Time.deltaTime);
+        //Debug.Log($"h:{h}, v:{v}");
+        
+        // [실습 1] 이미지와 같이 빨간색 영역 안에서만 캐릭터가 이동할 수 있게 구현
+        if (direction.y <= 0 && transform.position.y <= -5.0f)
+        {
+            direction.y = 0;
+        }
+        if (direction.y >= 0 && transform.position.y >= -3.0f)
+        {
+            direction.y = 0;
+        }
+        
+        // normalized : 벡터의 길이를 1로 만들어주는 것 (즉, 방향만 유지한다.)
+        // Vector2 normalizedSpeed = (direction * Speed).normalized;
+        // transform.Translate(direction * normalizedSpeed * Time.deltaTime);
         
         // 새로운 위치 = 현재 위치 + 거리(방향 * 속력 * 시간)
-        // transform.position += (Vector3)direction * Speed * Time.deltaTime;
+        transform.position += (Vector3)direction * Speed * Time.deltaTime;
     }
 }
