@@ -14,6 +14,29 @@ public class PlayerMove : MonoBehaviour
     // 초당 프레임 실행 횟수는 별다른 설정이 없을 경우, 가능한 많이 실행된다.
     private void Update()
     {
+        Move();
+        SpeedChange();
+    }
+
+    private void SpeedChange()
+    {
+        // [실습 3] 스피드 증가/감소 기능 구현
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            // 키보드 E키를 누르면 스피드 Up!
+            Speed++;
+            Debug.Log($"Speed 증가 : {Speed}");
+        }
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
+            // 키보드 Q키를 누르면 스피드 Down!
+            Speed--;
+            Debug.Log($"Speed 감소 : {Speed}");
+        }
+    }
+
+    private void Move()
+    {
         // // 1. 키보드 입력을 받는다.
         // if (Input.GetKey(KeyCode.LeftArrow))
         // {
@@ -66,19 +89,5 @@ public class PlayerMove : MonoBehaviour
         
         // transform.Translate(normalizedSpeed * Time.deltaTime);
         transform.position = newPosition; // 새로운 위치 = 현재 위치 + 거리(방향 * 속력 * 시간)
-
-        // [실습 3] 스피드 증가/감소 기능 구현
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            // 키보드 E키를 누르면 스피드 Up!
-            Speed++;
-            Debug.Log($"Speed 증가 : {Speed}");
-        }
-        else if (Input.GetKeyDown(KeyCode.Q))
-        {
-            // 키보드 Q키를 누르면 스피드 Down!
-            Speed--;
-            Debug.Log($"Speed 감소 : {Speed}");
-        }
     }
 }
