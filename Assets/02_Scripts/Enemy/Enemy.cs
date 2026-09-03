@@ -1,13 +1,14 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public abstract class Enemy : MonoBehaviour
 {
-    public float Health = 100;
-    public float MoveSpeed;
+    public float _health = 100;
+    public float _moveSpeed = 1f;
 
     private void Update()
     {
-        Vector2 direction = Vector2.down;
-        transform.Translate(direction * MoveSpeed * Time.deltaTime);
+        Move();
     }
+
+    protected abstract void Move();
 }

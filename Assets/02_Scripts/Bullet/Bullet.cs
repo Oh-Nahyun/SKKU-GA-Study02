@@ -29,8 +29,8 @@ public class Bullet : MonoBehaviour
             // GetComponent<타입>() -> 게임 오브젝트가 가지고 있는 컴포넌트를 참조
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
 
-            enemy.Health -= Damage;
-            if (enemy.Health <= 0)
+            enemy._health -= Damage;
+            if (enemy._health <= 0)
             {
                 Destroy(collision.gameObject); // 너죽자!
             }
