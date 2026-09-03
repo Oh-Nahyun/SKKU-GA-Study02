@@ -65,7 +65,7 @@ public class PlayerMove : MonoBehaviour
         // normalized : 벡터의 길이를 1로 만들어주는 것 (즉, 방향만 유지한다.)
         Vector2 normalizedDirection = new Vector2(h, v).normalized;
         Vector2 newPosition = transform.position + (Vector3)normalizedDirection * Speed * Time.deltaTime;
-        //Debug.Log($"h:{h}, v:{v}") ;
+        //Debug.Log($"h:{h}, v:{v}");
 
         // [실습 1] 이미지와 같이 빨간색 영역 안에서만 캐릭터가 이동할 수 있게 구현
         if (newPosition.y > MaxPositionY)
