@@ -61,7 +61,7 @@ public class PlayerFire : MonoBehaviour
             bulletBackRight.transform.position = FirePointBackRight.position;
 
             _isFired = true;
-            Debug.Log("총알 발사 완료!");
+            // Debug.Log("총알 발사 완료!");
         }
     }
 
@@ -78,13 +78,13 @@ public class PlayerFire : MonoBehaviour
         if (_isFired)
         {
             _lastTime -= Time.deltaTime;
-            Debug.Log($"남은 쿨타임 시간 : {_lastTime}");
+            // Debug.Log($"남은 쿨타임 시간 : {_lastTime}");
 
             if (_lastTime <= 0)
             {
                 _lastTime = CoolTime;
                 _isFired = false;
-                Debug.Log("총알 발사 가능!");
+                // Debug.Log("총알 발사 가능!");
             }
         }
     }
