@@ -3,18 +3,14 @@ using UnityEngine;
 
 public class EnemyGoToPlayer : Enemy
 {
+    private GameObject _player;
     private Vector2 _direction;
 
-    public EnemyGoToPlayer(float health, float moveSpeed)
+    private void Start()
     {
-        _health = health;
-        _moveSpeed = moveSpeed;
-    }
-
-    public void Start()
-    {
-        GameObject player = GameObject.Find("Player");
-        _direction = player.transform.position - transform.position;
+        _player = GameObject.FindWithTag("Player");
+        _direction = _player.transform.position - transform.position;
+        _direction.Normalize();
     }
 
     protected override void Move()

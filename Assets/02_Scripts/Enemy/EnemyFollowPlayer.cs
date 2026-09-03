@@ -2,16 +2,13 @@ using UnityEngine;
 
 public class EnemyFollowPlayer : Enemy
 {
-    public EnemyFollowPlayer(float health, float moveSpeed)
-    {
-        _health = health;
-        _moveSpeed = moveSpeed;
-    }
+    private GameObject _player;
 
     protected override void Move()
     {
-        GameObject player = GameObject.Find("Player");
-        Vector2 direction = player.transform.position - transform.position;
+        _player = GameObject.FindWithTag("Player");
+        Vector2 direction = _player.transform.position - transform.position;
+        direction.Normalize();
         transform.Translate(direction * _moveSpeed * Time.deltaTime);
     }
 }
