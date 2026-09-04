@@ -1,8 +1,14 @@
+using System;
 using UnityEngine;
 
 public class EnemyFollowPlayer : Enemy
 {
     private GameObject _player;
+
+    private void Start()
+    {
+        _player = GameObject.FindWithTag("Player");
+    }
 
     protected override void Move()
     {
