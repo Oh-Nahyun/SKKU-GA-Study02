@@ -13,10 +13,7 @@ public class EnemyFollowPlayer : Enemy
 
     protected override void Move()
     {
-        if (_player == null)
-        {
-            return;
-        }
+        if (_player == null) return;
 
         Vector2 direction = _player.transform.position - transform.position;
         direction.Normalize();

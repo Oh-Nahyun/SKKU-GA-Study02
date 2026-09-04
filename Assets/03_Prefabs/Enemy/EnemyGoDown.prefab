@@ -180,4 +180,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyGoDown
   _health: 100
+  _damage: 20
   _moveSpeed: 1
