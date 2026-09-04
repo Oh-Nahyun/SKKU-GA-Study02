@@ -180,4 +180,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyGoToPlayer
   _health: 100
-  _moveSpeed: 1
+  _moveSpeed: 3

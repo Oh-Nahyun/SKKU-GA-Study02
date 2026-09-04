@@ -20,6 +20,8 @@ public class EnemySpawner : MonoBehaviour
         if (_timer >= _spawnInterval)
         {
             _timer = 0;
+            _spawnInterval = Random.Range(1f, 3f); // float : 1 ~ 3 // UnityEngine의 Random.Range
+            //int randomInt = Random.Range(1, 3); // int : 1 ~ 2
             Spawn();
         }
     }
