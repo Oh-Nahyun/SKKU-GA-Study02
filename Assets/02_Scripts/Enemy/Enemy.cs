@@ -21,4 +21,13 @@ public abstract class Enemy : MonoBehaviour
             Destroy(gameObject); // 너죽자! // collision.gameObject
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Player player = other.gameObject.GetComponent<Player>();
+            player.TakeDamage(_damage);
+        }
+    }
 }
