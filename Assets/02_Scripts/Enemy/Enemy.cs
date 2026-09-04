@@ -24,11 +24,10 @@ public abstract class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag("Player")) return;
-
-        Player player = other.GetComponent<Player>();
-        player.TakeDamage(_damage);
-
-        Destroy(gameObject);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Player player = other.gameObject.GetComponent<Player>();
+            player.TakeDamage(_damage);
+        }
     }
 }
