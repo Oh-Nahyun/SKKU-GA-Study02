@@ -56,7 +56,6 @@ public class EnemySpawner : MonoBehaviour
         }
 
         Enemy enemy = Instantiate(_enemyPrefabs[enemyPrefabIndex]);
-        ;
         enemy.transform.position = transform.position;
     }
 }

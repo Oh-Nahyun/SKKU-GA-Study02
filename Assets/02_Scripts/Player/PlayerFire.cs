@@ -7,7 +7,6 @@ public class PlayerFire : MonoBehaviour
     // 필요 속성
     // - 총알 프리팹
     public GameObject BulletFrontPrefab;
-
     public GameObject BulletBackPrefab;
 
     // - 생성 위치(총구)
@@ -15,7 +14,6 @@ public class PlayerFire : MonoBehaviour
     public Transform FirePointFrontLeft;
     public Transform FirePointFrontRight;
     public Transform FirePointBackLeft;
-
     public Transform FirePointBackRight;
 
     // - 쿨타임
