@@ -6,13 +6,14 @@ public class EnemySpawner : MonoBehaviour
 {
     // 필요 속성
     // - 타이머
-    [Header("스폰간격")][SerializeField] private float _spawnInterval = 3f;
+    //[Header("스폰간격")][SerializeField] private float _spawnInterval = 3f;
+    [SerializeField] private float _spawnInterval = 3f;
     private float _timer;
 
-    // - 생성할 프리팹
-    //[Header("스폰할 적 프리팹")] [SerializeField] private GameObject _enemyPrefab;
+    // - 생성할 프리팹들
+    //[Header("스폰할 적 프리팹")][SerializeField] private GameObject _enemyPrefab;
     //[Header("스폰할 적 프리팹")][SerializeField] private Enemy _enemyPrefab; // Enemy 클래스까지 가지고 있다.
-    [Header("스폰할 적 프리팹")][SerializeField] private Enemy[] _enemyPrefabs = new Enemy[3];
+    [SerializeField] private Enemy[] _enemyPrefabs = new Enemy[3];
 
     private void Update()
     {
@@ -32,25 +33,30 @@ public class EnemySpawner : MonoBehaviour
         //Enemy enemy = Instantiate(enemyPrefab);
         //enemy.transform.position = transform.position;
 
-        Enemy enemy;
+        int enemyPrefabIndex = 0;
         float percent = Random.Range(0f, 1f);
 
+        // Todo : Scriptable Object를 사용해서 리팩토링
+        // 이유 1 : 배열을 사용했지만 각 아이템이 어떤 프리팹인지 알 수 없음
+        // 이유 2 : 각 적 스폰 확률을 매직 넘버로 하드코딩해서 유지보수가 어려움
         if (percent >= 0.5f)
         {
-            // 50%: Downward
-            enemy = Instantiate(_enemyPrefabs[0]);
+            // 50% : [0] Downward
+            enemyPrefabIndex = 0;
         }
         else if (percent >= 0.2f)
         {
-            // 30%: Aimed
-            enemy = Instantiate(_enemyPrefabs[1]);
+            // 30% : [1] Aimed
+            enemyPrefabIndex = 1;
         }
         else
         {
-            // 20%: Homing
-            enemy = Instantiate(_enemyPrefabs[2]);
+            // 20% : [2] Homing
+            enemyPrefabIndex = 2;
         }
 
+        Enemy enemy = Instantiate(_enemyPrefabs[enemyPrefabIndex]);
+        ;
         enemy.transform.position = transform.position;
     }
 }
