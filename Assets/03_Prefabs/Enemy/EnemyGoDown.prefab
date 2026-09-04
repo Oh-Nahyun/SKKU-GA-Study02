@@ -181,4 +181,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyGoDown
   _health: 100
   _damage: 20
-  _moveSpeed: 1
+  _moveSpeed: 0.5
+  _itemPrefabs:
+  - {fileID: 8780371897059735729, guid: 01aabf69129d9774f971d158aa0c4477, type: 3}
+  - {fileID: 2222169261210787571, guid: 9d05d963358e6114aa2f6ee47d2901eb, type: 3}
+  - {fileID: 5074810320186522452, guid: c6dc4b2365b1c9c46a243d245dc9be14, type: 3}

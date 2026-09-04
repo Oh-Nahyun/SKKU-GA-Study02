@@ -6,6 +6,8 @@ public class ItemMoveSpeedIncrease : Item
 
     protected override void Effect(Player player)
     {
+        Debug.Log($"플레이어 이동 속도 증가 전 : {player._playerMove.Speed}");
         player._playerMove.Speed += _moveSpeedIncrease;
+        Debug.Log($"플레이어 이동 속도 증가 후 : {player._playerMove.Speed}");
     }
 }

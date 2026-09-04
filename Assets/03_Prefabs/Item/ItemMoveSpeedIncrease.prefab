@@ -155,4 +155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfee476b293458544b77084af32d113d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemMoveSpeedIncrease
+  _moveSpeed: 1
+  _stopTime: 3
   _moveSpeedIncrease: 10

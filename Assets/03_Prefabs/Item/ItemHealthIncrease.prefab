@@ -142,4 +142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d6789c08d17fdd4fb2cbedb78bd9f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemHealthIncrease
+  _moveSpeed: 1
+  _stopTime: 2
   _healthIncrease: 5
