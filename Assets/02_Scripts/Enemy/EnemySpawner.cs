@@ -33,14 +33,14 @@ public class EnemySpawner : MonoBehaviour
         //enemy.transform.position = transform.position;
 
         Enemy enemy;
-        float percent = Random.Range(0f, 10f);
+        float percent = Random.Range(0f, 1f);
 
-        if (percent >= 5f)
+        if (percent >= 0.5f)
         {
             // 50%: Downward
             enemy = Instantiate(_enemyPrefabs[0]);
         }
-        else if (percent >= 2f)
+        else if (percent >= 0.2f)
         {
             // 30%: Aimed
             enemy = Instantiate(_enemyPrefabs[1]);
