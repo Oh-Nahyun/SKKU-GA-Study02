@@ -15,6 +15,7 @@ public class EnemyFollowPlayer : Enemy
     {
         if (_player == null)
         {
+            Debug.LogWarning("플레이어가 NULL 입니다.");
             return;
         }
 
