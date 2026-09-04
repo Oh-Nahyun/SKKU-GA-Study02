@@ -8,13 +8,13 @@ public class EnemyGoToPlayer : Enemy
 
     private void Start()
     {
-        _player = GameObject.FindWithTag("Player");
         _direction = _player.transform.position - transform.position;
         _direction.Normalize();
     }
 
     protected override void Move()
     {
+        _player = GameObject.FindWithTag("Player");
         transform.Translate(_direction * _moveSpeed * Time.deltaTime);
     }
 }

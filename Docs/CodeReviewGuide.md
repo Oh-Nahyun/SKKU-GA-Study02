@@ -132,6 +132,75 @@ player.TakeDamage(damage);
 4. 이벤트, 인터페이스, 컴포지션 중 어떤 방법이 적절한가?
 5. 변경 후 클래스 간 관계가 어떻게 달라지는가?
 
+## 캐싱 기법 확인 항목
+
+반복적으로 탐색하거나 계산하는 값이 불필요하게 매번 생성·조회되고 있지 않은지 확인한다.
+
+특히 Unity에서는 다음 항목을 우선적으로 확인한다.
+
+* `GetComponent`, `Find`, `FindObjectOfType` 등의 결과를 반복해서 조회하고 있지 않은가?
+* `Camera.main`, `Transform`, 자주 사용하는 컴포넌트 참조를 매번 가져오고 있지 않은가?
+* 동일한 계산 결과를 한 프레임 또는 여러 프레임 동안 반복해서 계산하고 있지 않은가?
+* 문자열 기반 해시값, 레이어, 애니메이션 파라미터 등을 반복 계산하고 있지 않은가?
+* 자주 접근하는 데이터가 Dictionary, 배열, 필드 등에 적절하게 캐싱되어 있는가?
+* 캐싱한 데이터가 원본 변경 이후에도 유효한지 확인하고 있는가?
+
+예를 들어 다음과 같이 매 프레임 컴포넌트를 탐색하는 코드는 불필요한 비용이 발생할 수 있다.
+
+```csharp
+private void Update()
+{
+    Rigidbody rigidbody = GetComponent<Rigidbody>();
+    rigidbody.AddForce(Vector3.forward);
+}
+```
+
+자주 사용하는 컴포넌트라면 초기화 시점에 한 번 조회하고 캐싱하는 방법을 우선 고려한다.
+
+```csharp
+private Rigidbody rigidbody;
+
+private void Awake()
+{
+    rigidbody = GetComponent<Rigidbody>();
+}
+
+private void Update()
+{
+    rigidbody.AddForce(Vector3.forward);
+}
+```
+
+애니메이션 파라미터처럼 문자열을 반복해서 사용하는 경우에는 해시값을 캐싱하는 방법도 고려한다.
+
+```csharp
+private static readonly int IsRunningHash =
+    Animator.StringToHash("IsRunning");
+```
+
+```csharp
+animator.SetBool(IsRunningHash, true);
+```
+
+다만 모든 값을 무조건 캐싱하도록 요구하지 않는다.
+
+다음과 같은 경우에는 캐싱으로 인해 오히려 코드 복잡도가 증가할 수 있다.
+
+* 한두 번만 사용하는 값
+* 계산 비용이 매우 작은 값
+* 항상 최신 상태를 조회해야 하는 값
+* 원본 변경 시 캐시 무효화 처리가 더 복잡해지는 값
+
+리뷰에서는 단순히 "캐싱해야 한다"고 작성하지 않고 다음 내용을 함께 확인한다.
+
+1. 해당 값이나 참조가 얼마나 자주 사용되는가?
+2. 탐색 또는 계산 비용이 실제로 의미 있는 수준인가?
+3. 캐싱한 값이 언제까지 유효한가?
+4. 원본이 변경되었을 때 캐시를 갱신해야 하는가?
+5. 캐싱으로 얻는 성능 이점이 코드 복잡도 증가보다 큰가?
+
+특히 `Update()`, `FixedUpdate()`, 반복문처럼 호출 빈도가 높은 코드에서는 반복 탐색과 반복 계산을 우선적으로 확인한다.
+
 ## SOLID 원칙
 
 SOLID 원칙을 기준으로 설계를 검토하되, 모든 코드에 인터페이스와 디자인 패턴을 강제하지 않는다.
