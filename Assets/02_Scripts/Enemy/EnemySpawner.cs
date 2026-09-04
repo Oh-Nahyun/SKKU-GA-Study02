@@ -11,7 +11,8 @@ public class EnemySpawner : MonoBehaviour
 
     // - 생성할 프리팹
     //[Header("스폰할 적 프리팹")] [SerializeField] private GameObject _enemyPrefab;
-    [Header("스폰할 적 프리팹")][SerializeField] private Enemy _enemyPrefab; // Enemy 클래스까지 가지고 있다.
+    //[Header("스폰할 적 프리팹")][SerializeField] private Enemy _enemyPrefab; // Enemy 클래스까지 가지고 있다.
+    [Header("스폰할 적 프리팹")][SerializeField] private Enemy[] _enemyPrefabs = new Enemy[3];
 
     private void Update()
     {
@@ -28,7 +29,28 @@ public class EnemySpawner : MonoBehaviour
 
     private void Spawn()
     {
-        Enemy enemy = Instantiate(_enemyPrefab);
+        //Enemy enemy = Instantiate(enemyPrefab);
+        //enemy.transform.position = transform.position;
+
+        Enemy enemy;
+        float percent = Random.Range(0f, 10f);
+
+        if (percent >= 5f)
+        {
+            // 50%: Downward
+            enemy = Instantiate(_enemyPrefabs[0]);
+        }
+        else if (percent >= 2f)
+        {
+            // 30%: Aimed
+            enemy = Instantiate(_enemyPrefabs[1]);
+        }
+        else
+        {
+            // 20%: Homing
+            enemy = Instantiate(_enemyPrefabs[2]);
+        }
+
         enemy.transform.position = transform.position;
     }
 }
