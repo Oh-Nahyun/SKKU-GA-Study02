@@ -1,14 +1,25 @@
+using System;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
     // 목적 : 키보드 입력에 따라서 플레이어 이동 처리를 하고 싶다.
 
+    private Animator _animator;
+
     public float Speed;
     public float MaxPositionY;
     public float MinPositionY;
     public float MaxPositionX;
     public float MinPositionX;
+
+    // 객체가 생성될 때 한 번 실행된다.
+    private void Awake()
+    {
+        // 애니메이터 컴포넌트에 대한 참조를 가져와서 할당한다.
+        //_animator = this.gameObject.GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
+    }
 
     // 매 프레임마다 실행된다.
     // 초당 프레임 실행 횟수는 별다른 설정이 없을 경우, 가능한 많이 실행된다.
@@ -64,6 +75,8 @@ public class PlayerMove : MonoBehaviour
 
         // normalized : 벡터의 길이를 1로 만들어주는 것 (즉, 방향만 유지한다.)
         Vector2 normalizedDirection = new Vector2(h, v).normalized;
+        _animator.SetInteger("x", (int)normalizedDirection.x);
+
         Vector2 newPosition = transform.position + (Vector3)normalizedDirection * Speed * Time.deltaTime;
         //Debug.Log($"h:{h}, v:{v}");
 
@@ -80,7 +93,7 @@ public class PlayerMove : MonoBehaviour
         // [실습 2] 좌우 이동에 있어 한쪽으로 쭈욱 이동하면 반대쪽에서 나오게 구현
         if (newPosition.x > MaxPositionX)
         {
-            newPosition.x = MinPositionY;
+            newPosition.x = MinPositionX;
         }
         else if (newPosition.x < MinPositionX)
         {
