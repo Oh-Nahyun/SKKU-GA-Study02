@@ -3,20 +3,24 @@ using UnityEngine;
 
 public abstract class Item : MonoBehaviour
 {
-    private GameObject _player;
-    [SerializeField] private float _moveSpeed = 3f;
+    private Player _player = null;
+    [SerializeField] private float _moveSpeed = 7f;
     [SerializeField] private float _stopTime = 1f;
     private float _timer = 0;
 
     private void Start()
     {
-        _player = GameObject.FindWithTag("Player");
+        _player = GameObject.FindWithTag("Player").GetComponent<Player>();
+        if (_player == null)
+        {
+            Debug.LogWarning("플레이어가 NULL 입니다.");
+            return;
+        }
     }
 
     private void Update()
     {
         StopFewSecondAndMove();
-        Move();
     }
 
     private void StopFewSecondAndMove()
@@ -25,17 +29,13 @@ public abstract class Item : MonoBehaviour
 
         if (_timer >= _stopTime)
         {
-            _timer = 0;
+            Move();
         }
     }
 
     private void Move()
     {
-        if (_player == null)
-        {
-            Debug.LogWarning("플레이어가 NULL 입니다.");
-            return;
-        }
+        if (_player == null) return;
 
         Vector2 direction = _player.transform.position - transform.position;
         direction.Normalize();
