@@ -19,31 +19,17 @@ public abstract class Enemy : MonoBehaviour
         _health -= damage;
         if (_health <= 0)
         {
-            Die();
             Destroy(gameObject); // 너죽자! // collision.gameObject
+            SpawnItem();
         }
     }
 
-    private void Die()
+    private void SpawnItem()
     {
-        int itemPrefabIndex = 0;
-        float percent = Random.Range(0f, 1f);
+        // Todo : Scriptable Object를 사용해서 리팩토링
+        if (Random.Range(0f, 1f) > 0.3f) return;
 
-        if (percent >= 0.7f)
-        {
-            itemPrefabIndex = 0;
-        }
-        else if (percent >= 0.4f)
-        {
-            itemPrefabIndex = 1;
-        }
-        else
-        {
-            itemPrefabIndex = 2;
-        }
-
-        Item item = Instantiate(_itemPrefabs[itemPrefabIndex]);
-        item.transform.position = transform.position;
+        Instantiate(_itemPrefabs[Random.Range(0, _itemPrefabs.Length)], transform.position, transform.rotation);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
