@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8258039319388947320}
   - component: {fileID: 3956753289074334770}
   - component: {fileID: 68546179424606841}
+  - component: {fileID: 9133216937840579803}
   m_Layer: 8
   m_Name: EnemyGoDown
   m_TagString: Enemy
@@ -84,8 +85,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.6431373, b: 0.13679248, a: 1}
+  m_Sprite: {fileID: -1147401495359466748, guid: 138040323294fd440a3a823e5d70ad01, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -186,3 +187,25 @@ MonoBehaviour:
   - {fileID: 8780371897059735729, guid: 01aabf69129d9774f971d158aa0c4477, type: 3}
   - {fileID: 2222169261210787571, guid: 9d05d963358e6114aa2f6ee47d2901eb, type: 3}
   - {fileID: 5074810320186522452, guid: c6dc4b2365b1c9c46a243d245dc9be14, type: 3}
+--- !u!95 &9133216937840579803
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829256008033406239}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c018a7ec349333a49a7d86da196cf186, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
