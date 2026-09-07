@@ -19,6 +19,7 @@ public class PlayerMove : MonoBehaviour
         // 애니메이터 컴포넌트에 대한 참조를 가져와서 할당한다.
         //_animator = this.gameObject.GetComponent<Animator>();
         _animator = GetComponent<Animator>();
+        //_animator.Play("idle"); // 애니메이션을 처음부터 자꾸 실행
     }
 
     // 매 프레임마다 실행된다.
