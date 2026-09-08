@@ -188,6 +188,7 @@ MonoBehaviour:
   - {fileID: 8780371897059735729, guid: 01aabf69129d9774f971d158aa0c4477, type: 3}
   - {fileID: 2222169261210787571, guid: 9d05d963358e6114aa2f6ee47d2901eb, type: 3}
   - {fileID: 5074810320186522452, guid: c6dc4b2365b1c9c46a243d245dc9be14, type: 3}
+  _deathEffectPrefab: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
 --- !u!95 &2888576119304373118
 Animator:
   serializedVersion: 7

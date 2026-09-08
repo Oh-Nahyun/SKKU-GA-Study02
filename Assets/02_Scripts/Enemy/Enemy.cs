@@ -10,6 +10,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] private int _damage = 100;
     [SerializeField] protected float _moveSpeed = 1f;
     [SerializeField] private Item[] _itemPrefabs = new Item[3];
+    [SerializeField] private GameObject _deathEffectPrefab;
 
     private void Awake()
     {
@@ -28,6 +29,7 @@ public abstract class Enemy : MonoBehaviour
         _health -= damage;
         if (_health <= 0)
         {
+            Instantiate(_deathEffectPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject); // 너죽자! // collision.gameObject
             SpawnItem();
         }
