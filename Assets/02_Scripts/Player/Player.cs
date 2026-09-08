@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     // - 데이터 은닉
     // - 메서드를 통한 상태 변경
     [SerializeField] private int _health = 100;
+    private int _maxHealth = 100;
 
     // 잘 설계된 클래스는
     // - 필드 (인스턴스 변수)
@@ -45,15 +46,12 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage)
     {
         _health -= damage;
-        if (_health <= 0)
-        {
-            Destroy(gameObject);
-        }
+        if (Health <= 0) Destroy(gameObject);
     }
 
     public void Heal(int healthIncrease)
     {
         _health += healthIncrease;
-        if (Health >= 100) _health = 100;
+        if (Health >= _maxHealth) _health = _maxHealth;
     }
 }
