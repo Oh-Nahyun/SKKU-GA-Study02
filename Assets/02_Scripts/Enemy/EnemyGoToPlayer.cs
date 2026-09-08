@@ -5,6 +5,7 @@ public class EnemyGoToPlayer : Enemy
 {
     private GameObject _player;
     private Vector2 _direction;
+    private float _angle;
 
     private void Start()
     {
@@ -18,6 +19,9 @@ public class EnemyGoToPlayer : Enemy
 
         _direction = _player.transform.position - transform.position;
         _direction.Normalize();
+
+        _angle = 180 - Mathf.Atan2(_direction.x, _direction.y) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, _angle);
     }
 
     protected override void Move()

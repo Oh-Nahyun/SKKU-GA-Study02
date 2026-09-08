@@ -22,5 +22,8 @@ public class EnemyFollowPlayer : Enemy
         Vector2 direction = _player.transform.position - transform.position;
         direction.Normalize();
         transform.Translate(direction * _moveSpeed * Time.deltaTime);
+
+        float angle = 180 - Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 }
