@@ -20,10 +20,11 @@ public class EnemyFollowPlayer : Enemy
         }
 
         Vector2 direction = _player.transform.position - transform.position;
-        direction.Normalize();
-        transform.Translate(direction * _moveSpeed * Time.deltaTime);
+        float angle = 90 + Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        float angle = 180 - Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle);
+        //transform.Translate(direction * _moveSpeed * Time.deltaTime);
+        transform.position += (Vector3)(direction * _moveSpeed) * Time.deltaTime;
+        transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        direction.Normalize();
     }
 }

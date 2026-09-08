@@ -18,10 +18,9 @@ public class EnemyGoToPlayer : Enemy
         }
 
         _direction = _player.transform.position - transform.position;
+        _angle = 90 + Mathf.Atan2(_direction.y, _direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, _angle);
         _direction.Normalize();
-
-        _angle = 180 - Mathf.Atan2(_direction.x, _direction.y) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, _angle);
     }
 
     protected override void Move()
@@ -32,6 +31,7 @@ public class EnemyGoToPlayer : Enemy
             return;
         }
 
-        transform.Translate(_direction * _moveSpeed * Time.deltaTime);
+        //transform.Translate(_direction * _moveSpeed * Time.deltaTime);
+        transform.position += (Vector3)(_direction * _moveSpeed) * Time.deltaTime;
     }
 }

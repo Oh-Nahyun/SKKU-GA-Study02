@@ -180,9 +180,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d3fb0f37cdd0a419fd30ea8949ef6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyGoToPlayer
+  _animator: {fileID: 0}
   _health: 100
   _damage: 10
-  _moveSpeed: 1
+  _moveSpeed: 1.5
   _itemPrefabs:
   - {fileID: 8780371897059735729, guid: 01aabf69129d9774f971d158aa0c4477, type: 3}
   - {fileID: 2222169261210787571, guid: 9d05d963358e6114aa2f6ee47d2901eb, type: 3}
