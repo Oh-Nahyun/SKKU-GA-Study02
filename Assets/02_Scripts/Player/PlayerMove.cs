@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
@@ -7,7 +6,9 @@ public class PlayerMove : MonoBehaviour
 
     private Animator _animator;
 
-    public float Speed;
+    private float _speed = 7f;
+    public float Speed => _speed;
+
     public float MaxPositionY;
     public float MinPositionY;
     public float MaxPositionX;
@@ -27,24 +28,7 @@ public class PlayerMove : MonoBehaviour
     private void Update()
     {
         Move();
-        SpeedChange();
-    }
-
-    private void SpeedChange()
-    {
-        // [실습 3] 스피드 증가/감소 기능 구현
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            // 키보드 E키를 누르면 스피드 Up!
-            Speed++;
-            Debug.Log($"Speed 증가 : {Speed}");
-        }
-        else if (Input.GetKeyDown(KeyCode.Q))
-        {
-            // 키보드 Q키를 누르면 스피드 Down!
-            Speed--;
-            Debug.Log($"Speed 감소 : {Speed}");
-        }
+        ChangeSpeed();
     }
 
     private void Move()
@@ -78,7 +62,7 @@ public class PlayerMove : MonoBehaviour
         Vector2 normalizedDirection = new Vector2(h, v).normalized;
         _animator.SetInteger("x", (int)normalizedDirection.x);
 
-        Vector2 newPosition = transform.position + (Vector3)normalizedDirection * Speed * Time.deltaTime;
+        Vector2 newPosition = transform.position + (Vector3)(normalizedDirection * _speed) * Time.deltaTime;
         //Debug.Log($"h:{h}, v:{v}");
 
         // [실습 1] 이미지와 같이 빨간색 영역 안에서만 캐릭터가 이동할 수 있게 구현
@@ -103,5 +87,27 @@ public class PlayerMove : MonoBehaviour
 
         // transform.Translate(normalizedSpeed * Time.deltaTime);
         transform.position = newPosition; // 새로운 위치 = 현재 위치 + 거리(방향 * 속력 * 시간)
+    }
+
+    private void ChangeSpeed()
+    {
+        // [실습 3] 스피드 증가/감소 기능 구현
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            // 키보드 E키를 누르면 스피드 Up!
+            _speed++;
+            Debug.Log($"Speed 증가 : {Speed}");
+        }
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
+            // 키보드 Q키를 누르면 스피드 Down!
+            _speed--;
+            Debug.Log($"Speed 감소 : {Speed}");
+        }
+    }
+
+    public void IncreaseMoveSpeed(int moveSpeedIncrease)
+    {
+        _speed += moveSpeedIncrease;
     }
 }

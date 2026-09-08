@@ -1379,7 +1379,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9e8660efc138141bdd2bacbf3af0fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMove
-  Speed: 7
   MaxPositionY: -1
   MinPositionY: -5
   MaxPositionX: 2.5
@@ -1402,7 +1401,6 @@ MonoBehaviour:
   FirePointFrontRight: {fileID: 1555706517}
   FirePointBackLeft: {fileID: 1630243911}
   FirePointBackRight: {fileID: 1269914548}
-  CoolTime: 0.5
 --- !u!50 &1606705506
 Rigidbody2D:
   serializedVersion: 5
@@ -1493,8 +1491,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   _health: 100
-  _playerMove: {fileID: 0}
-  _playerFire: {fileID: 0}
+  _playerMove: {fileID: 1606705504}
+  _playerFire: {fileID: 1606705505}
 --- !u!95 &1606705509
 Animator:
   serializedVersion: 7

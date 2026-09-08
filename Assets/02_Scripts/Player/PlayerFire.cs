@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class PlayerFire : MonoBehaviour
@@ -17,15 +16,16 @@ public class PlayerFire : MonoBehaviour
     public Transform FirePointBackRight;
 
     // - 쿨타임
-    public float CoolTime;
+    private float _coolTime = 0.5f;
+    public float CoolTime => _coolTime;
 
     private float _lastTime;
 
     // - 발사 여부
-    private bool _isFired = false;
+    private bool _isFired;
 
     // - 자동 모드 여부
-    private bool _isAutoMode = false;
+    private bool _isAutoMode;
 
     private void Start()
     {
@@ -85,5 +85,10 @@ public class PlayerFire : MonoBehaviour
                 // Debug.Log("총알 발사 가능!");
             }
         }
+    }
+
+    public void IncreaseFireSpeed(float fireSpeedIncrease)
+    {
+        _coolTime -= fireSpeedIncrease;
     }
 }
