@@ -26,6 +26,7 @@ public class Bullet : MonoBehaviour
 
             // GetComponent<타입>() -> 게임 오브젝트가 가지고 있는 컴포넌트를 참조
             Enemy enemy = other.gameObject.GetComponent<Enemy>();
+            enemy._animator.SetTrigger("IsHit");
 
             // 응집도는 높히고, 결합도는 낮춰라!
             // 결합도란 묻는거.. 매번 묻는거...

@@ -1,11 +1,20 @@
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public abstract class Enemy : MonoBehaviour
 {
+    public Animator _animator;
+
     [SerializeField] private int _health = 100;
     [SerializeField] private int _damage = 100;
     [SerializeField] protected float _moveSpeed = 1f;
     [SerializeField] private Item[] _itemPrefabs = new Item[3];
+
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+    }
 
     private void Update()
     {
