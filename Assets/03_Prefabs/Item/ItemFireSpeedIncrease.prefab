@@ -160,6 +160,7 @@ MonoBehaviour:
   _moveSpeed: 1
   _stopTime: 1
   _fireSpeedIncrease: 0.2
+  _getFireSpeedEffectPrefab: {fileID: 2708598583397607911, guid: 6398d43fe79ea0140913dc5530c646af, type: 3}
 --- !u!95 &4896794426382616047
 Animator:
   serializedVersion: 7

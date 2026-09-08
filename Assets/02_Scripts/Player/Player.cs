@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Random = System.Random;
 
 public class Player : MonoBehaviour
 {
@@ -36,6 +37,8 @@ public class Player : MonoBehaviour
 
     public PlayerMove _playerMove;
     public PlayerFire _playerFire;
+    [SerializeField] private GameObject[] _hitEffectPrefabs;
+    [SerializeField] private GameObject _deathEffectPrefab;
 
     private void Start()
     {
@@ -46,7 +49,14 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage)
     {
         _health -= damage;
-        if (Health <= 0) Destroy(gameObject);
+        int index = UnityEngine.Random.Range(0, _hitEffectPrefabs.Length);
+        Instantiate(_hitEffectPrefabs[index], transform.position, Quaternion.identity);
+
+        if (Health <= 0)
+        {
+            Instantiate(_deathEffectPrefab, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 
     public void Heal(int healthIncrease)
