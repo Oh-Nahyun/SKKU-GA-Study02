@@ -7,9 +7,9 @@ public class ItemFireSpeedIncrease : Item
 
     protected override void Effect(Player player)
     {
-        Debug.Log($"플레이어 공격 속도 증가 전 : {player._playerFire.CoolTime}");
+        //Debug.Log($"플레이어 공격 속도 증가 전 : {player._playerFire.CoolTime}");
         Instantiate(_getFireSpeedEffectPrefab, transform.position, Quaternion.identity);
         player._playerFire.IncreaseFireSpeed(_fireSpeedIncrease);
-        Debug.Log($"플레이어 공격 속도 증가 후 : {player._playerFire.CoolTime}");
+        //Debug.Log($"플레이어 공격 속도 증가 후 : {player._playerFire.CoolTime}");
     }
 }

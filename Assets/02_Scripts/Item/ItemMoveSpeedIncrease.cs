@@ -7,9 +7,9 @@ public class ItemMoveSpeedIncrease : Item
 
     protected override void Effect(Player player)
     {
-        Debug.Log($"플레이어 이동 속도 증가 전 : {player._playerMove.Speed}");
+        //Debug.Log($"플레이어 이동 속도 증가 전 : {player._playerMove.Speed}");
         Instantiate(_getMoveSpeedEffectPrefab, transform.position, Quaternion.identity);
         player._playerMove.IncreaseMoveSpeed(_moveSpeedIncrease);
-        Debug.Log($"플레이어 이동 속도 증가 후 : {player._playerMove.Speed}");
+        //Debug.Log($"플레이어 이동 속도 증가 후 : {player._playerMove.Speed}");
     }
 }

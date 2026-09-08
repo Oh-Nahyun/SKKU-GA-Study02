@@ -7,9 +7,9 @@ public class ItemHealthIncrease : Item
 
     protected override void Effect(Player player)
     {
-        Debug.Log($"플레이어 체력 증가 전 : {player.Health}");
+        //Debug.Log($"플레이어 체력 증가 전 : {player.Health}");
         Instantiate(_getHealEffectPrefab, transform.position, Quaternion.identity);
         player.Heal(_healthIncrease);
-        Debug.Log($"플레이어 체력 증가 후 : {player.Health}");
+        //Debug.Log($"플레이어 체력 증가 후 : {player.Health}");
     }
 }
