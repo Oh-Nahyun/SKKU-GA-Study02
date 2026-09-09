@@ -37,7 +37,7 @@ public abstract class Enemy : MonoBehaviour
 
     private void SpawnItem()
     {
-        // Todo : Scriptable Object를 사용해서 리팩토링
+        // ToDO : Scriptable Object를 사용해서 리팩토링
         if (Random.Range(0f, 1f) > 0.3f) return;
 
         Instantiate(_itemPrefabs[Random.Range(0, _itemPrefabs.Length)], transform.position, transform.rotation);
