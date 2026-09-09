@@ -6,6 +6,9 @@ public abstract class Enemy : MonoBehaviour
 {
     public Animator _animator;
 
+    // ToDo : 적이 공격 당할 때 재생시켜주는 피격 사운드
+    private AudioSource _damagedAudioSource;
+
     [SerializeField] private int _health = 100;
     [SerializeField] private int _damage = 100;
     [SerializeField] protected float _moveSpeed = 1f;
@@ -15,6 +18,7 @@ public abstract class Enemy : MonoBehaviour
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+        _damagedAudioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -27,6 +31,8 @@ public abstract class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         _health -= damage;
+        _damagedAudioSource.Play();
+
         if (_health <= 0)
         {
             Instantiate(_deathEffectPrefab, transform.position, Quaternion.identity);
