@@ -54,6 +54,8 @@ public class PlayerBomb : MonoBehaviour
         if (_countTime >= _duration && !_isDestroyed)
         {
             //Debug.Log("---폭탄제거---");
+            Bomb bomb = _bombGameObject.GetComponent<Bomb>();
+            bomb.ChangeIsExplosion(false);
             Destroy(_bombGameObject);
             _isDestroyed = true;
         }

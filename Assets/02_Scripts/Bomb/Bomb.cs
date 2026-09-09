@@ -18,8 +18,13 @@ public class Bomb : MonoBehaviour
     {
         if (!other.CompareTag("Enemy")) return;
 
-        _animator.SetBool(IsExplosionHash, true);
+        ChangeIsExplosion(true);
         Enemy enemy = other.gameObject.GetComponent<Enemy>();
         enemy.TakeDamage(Damage);
+    }
+
+    public void ChangeIsExplosion(bool isExplosion)
+    {
+        _animator.SetBool(IsExplosionHash, isExplosion);
     }
 }
