@@ -1,0 +1,578 @@
+fileFormatVersion: 2
+guid: 8c616b4631ad6af42ab2658b6039bc15
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1483665779731714255
+    second: Bomb_0
+  - first:
+      213: -1902917897002446259
+    second: Bomb_1
+  - first:
+      213: -5839540051515997725
+    second: Bomb_2
+  - first:
+      213: -5337159410277229379
+    second: Bomb_3
+  - first:
+      213: 4119226490080697988
+    second: Bomb_4
+  - first:
+      213: -3851982506454002795
+    second: Bomb_5
+  - first:
+      213: 6209065506319696928
+    second: Bomb_6
+  - first:
+      213: -3399856696407936989
+    second: Bomb_7
+  - first:
+      213: 1985883963534080937
+    second: Bomb_8
+  - first:
+      213: 4628270932175567455
+    second: Bomb_9
+  - first:
+      213: -6024620564409628431
+    second: Bomb_10
+  - first:
+      213: 7996123559772295727
+    second: Bomb_11
+  - first:
+      213: 5531716946309243334
+    second: Bomb_12
+  - first:
+      213: 407215636444879582
+    second: Bomb_13
+  - first:
+      213: 663768082219358500
+    second: Bomb_14
+  - first:
+      213: -6181241212211882912
+    second: Bomb_15
+  - first:
+      213: 1636366620148700834
+    second: Bomb_16
+  - first:
+      213: -8934551892336626729
+    second: Bomb_17
+  - first:
+      213: -7630528512243606408
+    second: Bomb_18
+  - first:
+      213: -1327680363887671476
+    second: Bomb_19
+  - first:
+      213: -2639101180626631589
+    second: Bomb_20
+  - first:
+      213: 3759166377018532169
+    second: Bomb_21
+  - first:
+      213: -8700416650187814130
+    second: Bomb_22
+  - first:
+      213: -9163286153582537170
+    second: Bomb_23
+  - first:
+      213: 8687635437418292430
+    second: Bomb_24
+  - first:
+      213: -3763141957501395028
+    second: Bomb_25
+  - first:
+      213: 6142103769405561942
+    second: Bomb_26
+  - first:
+      213: 1626101962410630468
+    second: Bomb_27
+  - first:
+      213: -2522659215533049048
+    second: Bomb_28
+  - first:
+      213: -3449880160876943462
+    second: Bomb_29
+  - first:
+      213: 787218043658716336
+    second: Bomb_30
+  - first:
+      213: 5179763133201746555
+    second: Bomb_31
+  - first:
+      213: 5811805697643037344
+    second: Bomb_32
+  - first:
+      213: -1897679074355123490
+    second: Bomb_33
+  - first:
+      213: 7934719020283917217
+    second: Bomb_34
+  - first:
+      213: -7720988650987838864
+    second: Bomb_35
+  - first:
+      213: 4010398376134062452
+    second: Bomb_36
+  - first:
+      213: 1165233251206042926
+    second: Bomb_37
+  - first:
+      213: -3011133507457227403
+    second: Bomb_38
+  - first:
+      213: 2929087585850842699
+    second: Bomb_39
+  - first:
+      213: -837391218997039150
+    second: Bomb_40
+  - first:
+      213: 8075374618732237370
+    second: Bomb_41
+  - first:
+      213: 1094961661201596266
+    second: Bomb_42
+  - first:
+      213: 4150002975303913961
+    second: Bomb_43
+  - first:
+      213: -5052376574868356214
+    second: Bomb_44
+  - first:
+      213: -4038723344892538141
+    second: Bomb_45
+  - first:
+      213: -588055566435909724
+    second: Bomb_46
+  - first:
+      213: 3475202474951358523
+    second: Bomb_47
+  - first:
+      213: 9038708473632336338
+    second: Bomb_48
+  - first:
+      213: 4838417827896113160
+    second: Bomb_49
+  - first:
+      213: -166529656486268139
+    second: Bomb_50
+  - first:
+      213: 2068391552708686747
+    second: Bomb_51
+  - first:
+      213: -5503674734118770515
+    second: Bomb_52
+  - first:
+      213: -34689001260541126
+    second: Bomb_53
+  - first:
+      213: 1215926415765157991
+    second: Bomb_54
+  - first:
+      213: 430784906597656740
+    second: Bomb_55
+  - first:
+      213: 2727047337420243292
+    second: Bomb_56
+  - first:
+      213: -4530593607793740568
+    second: Bomb_57
+  - first:
+      213: -1017775839788200448
+    second: Bomb_58
+  - first:
+      213: -8957559826298642461
+    second: Bomb_59
+  - first:
+      213: 5549019109336321878
+    second: Bomb_60
+  - first:
+      213: 9138192486275487704
+    second: Bomb_61
+  - first:
+      213: -8766006923075031119
+    second: Bomb_62
+  - first:
+      213: -3103596389024613158
+    second: Bomb_63
+  - first:
+      213: 2964440225776123195
+    second: Bomb_64
+  - first:
+      213: 384044797116432103
+    second: Bomb_65
+  - first:
+      213: -1650054118967720248
+    second: Bomb_66
+  - first:
+      213: -3202358381021401438
+    second: Bomb_67
+  - first:
+      213: 8374654093404514149
+    second: Bomb_68
+  - first:
+      213: 1627977020624755992
+    second: Bomb_69
+  - first:
+      213: 7020882424564180123
+    second: Bomb_70
+  - first:
+      213: -1558912369284467525
+    second: Bomb_71
+  - first:
+      213: 903066175775349147
+    second: Bomb_72
+  - first:
+      213: -5085718544686950410
+    second: Bomb_73
+  - first:
+      213: -2566017224036973664
+    second: Bomb_74
+  - first:
+      213: -301638040843659899
+    second: Bomb_75
+  - first:
+      213: 4828416424087926576
+    second: Bomb_76
+  - first:
+      213: -4042961691688127194
+    second: Bomb_77
+  - first:
+      213: -806772746681114372
+    second: Bomb_78
+  - first:
+      213: 7724235241243852814
+    second: Bomb_79
+  - first:
+      213: -5733835845499542771
+    second: Bomb_80
+  - first:
+      213: 8290567771177119794
+    second: Bomb_81
+  - first:
+      213: -4669269175842273264
+    second: Bomb_82
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bomb_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 444
+        width: 443
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13f20b985d5f86be0800000000000000
+      internalID: -1483665779731714255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_1
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 444
+        width: 443
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d429f68314a7795e0800000000000000
+      internalID: -1902917897002446259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_2
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 444
+        width: 443
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e109b92349c5fea0800000000000000
+      internalID: -5839540051515997725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_3
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 444
+        width: 443
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbcdac83bc99ee5b0800000000000000
+      internalID: -5337159410277229379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 443
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48e93aa0bae6a2930800000000000000
+      internalID: 4119226490080697988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_5
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 1
+        width: 443
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5935acda1520b8ac0800000000000000
+      internalID: -3851982506454002795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_6
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 1
+        width: 443
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02401535e280b2650800000000000000
+      internalID: 6209065506319696928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_7
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 1
+        width: 443
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3203f5b095841d0d0800000000000000
+      internalID: -3399856696407936989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: daa266a85dd3da14097b5f0dbfcdf721
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":2.0},"gridSpriteSize":{"x":443.0,"y":443.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Bomb_0: -1483665779731714255
+      Bomb_1: -1902917897002446259
+      Bomb_2: -5839540051515997725
+      Bomb_3: -5337159410277229379
+      Bomb_4: 4119226490080697988
+      Bomb_5: -3851982506454002795
+      Bomb_6: 6209065506319696928
+      Bomb_7: -3399856696407936989
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
