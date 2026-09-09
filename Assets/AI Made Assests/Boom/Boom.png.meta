@@ -1,0 +1,679 @@
+fileFormatVersion: 2
+guid: d7dee325f91565e4bb73ce847c1e4d52
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7034660610512690298
+    second: Boom_0
+  - first:
+      213: -8874246152023096229
+    second: Boom_1
+  - first:
+      213: 4221536321085816454
+    second: Boom_2
+  - first:
+      213: -7015227078107275993
+    second: Boom_3
+  - first:
+      213: -9174831917299113538
+    second: Boom_4
+  - first:
+      213: 4866456461726170714
+    second: Boom_5
+  - first:
+      213: -4637372867516582897
+    second: Boom_6
+  - first:
+      213: -7736590790072129272
+    second: Boom_7
+  - first:
+      213: -2281317386447823279
+    second: Boom_8
+  - first:
+      213: -5165321498635441078
+    second: Boom_9
+  - first:
+      213: 9185369822335819737
+    second: Boom_10
+  - first:
+      213: 4880753605998566757
+    second: Boom_11
+  - first:
+      213: -2724324735537979317
+    second: Boom_12
+  - first:
+      213: -804956749596969146
+    second: Boom_13
+  - first:
+      213: 4202486062909278171
+    second: Boom_14
+  - first:
+      213: -2623007795118903731
+    second: Boom_15
+  - first:
+      213: -7631404033018189531
+    second: Boom_16
+  - first:
+      213: 3650699929217689379
+    second: Boom_17
+  - first:
+      213: -7160334597472741672
+    second: Boom_18
+  - first:
+      213: 8761131828157412588
+    second: Boom_19
+  - first:
+      213: 3934516840706091368
+    second: Boom_20
+  - first:
+      213: -6056631244051826170
+    second: Boom_21
+  - first:
+      213: -5919723131737052341
+    second: Boom_22
+  - first:
+      213: -5846114906387167231
+    second: Boom_23
+  - first:
+      213: 3822546599231552774
+    second: Boom_24
+  - first:
+      213: 7025217197543390043
+    second: Boom_25
+  - first:
+      213: -5575644580950544536
+    second: Boom_26
+  - first:
+      213: -6330185485281238224
+    second: Boom_27
+  - first:
+      213: -8003564653958631709
+    second: Boom_28
+  - first:
+      213: 3087079608338085636
+    second: Boom_29
+  - first:
+      213: 5269644529729072003
+    second: Boom_30
+  - first:
+      213: 6690259697749258579
+    second: Boom_31
+  - first:
+      213: -5120455804333520870
+    second: Boom_32
+  - first:
+      213: -6099123500881403041
+    second: Boom_33
+  - first:
+      213: 2891265756703742795
+    second: Boom_34
+  - first:
+      213: 1942182649326040445
+    second: Boom_35
+  - first:
+      213: 5293448523216814850
+    second: Boom_36
+  - first:
+      213: 3996277330099337068
+    second: Boom_37
+  - first:
+      213: -8631799547145523238
+    second: Boom_38
+  - first:
+      213: -2159752800682148091
+    second: Boom_39
+  - first:
+      213: -7325234141041889308
+    second: Boom_40
+  - first:
+      213: -4093974571139367337
+    second: Boom_41
+  - first:
+      213: 2522308334993501959
+    second: Boom_42
+  - first:
+      213: 78783483993320238
+    second: Boom_43
+  - first:
+      213: 5934253222946742825
+    second: Boom_44
+  - first:
+      213: -3037349511269261182
+    second: Boom_45
+  - first:
+      213: -8144756403862145372
+    second: Boom_46
+  - first:
+      213: 4374638863456085497
+    second: Boom_47
+  - first:
+      213: -7438085998630352570
+    second: Boom_48
+  - first:
+      213: 7887807156967191465
+    second: Boom_49
+  - first:
+      213: 7069950929277530257
+    second: Boom_50
+  - first:
+      213: -3382434541193650506
+    second: Boom_51
+  - first:
+      213: 3668902352204631846
+    second: Boom_52
+  - first:
+      213: 3253557911010113786
+    second: Boom_53
+  - first:
+      213: -7290175267655044057
+    second: Boom_54
+  - first:
+      213: -7185791998722406141
+    second: Boom_55
+  - first:
+      213: 6276424020130141212
+    second: Boom_56
+  - first:
+      213: -8634665804211349678
+    second: Boom_57
+  - first:
+      213: -3675553815534477277
+    second: Boom_58
+  - first:
+      213: 3349275490000147286
+    second: Boom_59
+  - first:
+      213: -2537234270600912456
+    second: Boom_60
+  - first:
+      213: -9118629884195633707
+    second: Boom_61
+  - first:
+      213: 6579720817681222716
+    second: Boom_62
+  - first:
+      213: -1348883806560178255
+    second: Boom_63
+  - first:
+      213: -764083146387788390
+    second: Boom_64
+  - first:
+      213: 5636245068502031659
+    second: Boom_65
+  - first:
+      213: -8876790718397771085
+    second: Boom_66
+  - first:
+      213: -4197700721733516029
+    second: Boom_67
+  - first:
+      213: -8004661271049296455
+    second: Boom_68
+  - first:
+      213: 5122170142718885438
+    second: Boom_69
+  - first:
+      213: -4772774239514492439
+    second: Boom_70
+  - first:
+      213: -1139743493374392384
+    second: Boom_71
+  - first:
+      213: 5186473069529428109
+    second: Boom_72
+  - first:
+      213: -2488863458849538004
+    second: Boom_73
+  - first:
+      213: 7186518671946387639
+    second: Boom_74
+  - first:
+      213: 7084953302096938416
+    second: Boom_75
+  - first:
+      213: 8347582166443064690
+    second: Boom_76
+  - first:
+      213: 5205235318870266953
+    second: Boom_77
+  - first:
+      213: -1318936109784420
+    second: Boom_78
+  - first:
+      213: 5948384551048209393
+    second: Boom_79
+  - first:
+      213: 7260959438073953963
+    second: Boom_80
+  - first:
+      213: 4442104583373172091
+    second: Boom_81
+  - first:
+      213: 4856150843614475787
+    second: Boom_82
+  - first:
+      213: -749797493045905228
+    second: Boom_83
+  - first:
+      213: -4182600083707801047
+    second: Boom_84
+  - first:
+      213: -8977314634777712786
+    second: Boom_85
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boom_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 724
+        width: 362
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7c9a05dd8220a160800000000000000
+      internalID: 7034660610512690298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boom_1
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 724
+        width: 362
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b54494b742858d480800000000000000
+      internalID: -8874246152023096229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boom_2
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 724
+        width: 362
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68ebab8dae8e59a30800000000000000
+      internalID: 4221536321085816454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boom_3
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 724
+        width: 362
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72dd6b60428e4ae90800000000000000
+      internalID: -7015227078107275993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boom_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 362
+        width: 362
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb168774bf27ca080800000000000000
+      internalID: -9174831917299113538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boom_5
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 362
+        width: 362
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5eb71c4e50298340800000000000000
+      internalID: 4866456461726170714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boom_6
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 362
+        width: 362
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f04b3a462fdb4afb0800000000000000
+      internalID: -4637372867516582897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boom_7
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 362
+        width: 362
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8092139aaab12a490800000000000000
+      internalID: -7736590790072129272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boom_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 362
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15edad88ce12750e0800000000000000
+      internalID: -2281317386447823279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boom_9
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 0
+        width: 362
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4c652bc6771158b0800000000000000
+      internalID: -5165321498635441078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boom_10
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 0
+        width: 362
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9df5beeef2df87f70800000000000000
+      internalID: 9185369822335819737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boom_11
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 0
+        width: 362
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56d50c99b8bebb340800000000000000
+      internalID: 4880753605998566757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1563bd43313184d49b1cd5b15c4c20f4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":3.0},"gridSpriteSize":{"x":362.0,"y":362.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Boom_0: 7034660610512690298
+      Boom_1: -8874246152023096229
+      Boom_10: 9185369822335819737
+      Boom_11: 4880753605998566757
+      Boom_2: 4221536321085816454
+      Boom_3: -7015227078107275993
+      Boom_4: -9174831917299113538
+      Boom_5: 4866456461726170714
+      Boom_6: -4637372867516582897
+      Boom_7: -7736590790072129272
+      Boom_8: -2281317386447823279
+      Boom_9: -5165321498635441078
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
