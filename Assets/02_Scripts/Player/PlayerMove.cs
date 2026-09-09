@@ -14,6 +14,8 @@ public class PlayerMove : MonoBehaviour
     public float MaxPositionX;
     public float MinPositionX;
 
+    private static readonly int XHash = Animator.StringToHash("x");
+
     // 객체가 생성될 때 한 번 실행된다.
     private void Awake()
     {
@@ -60,7 +62,7 @@ public class PlayerMove : MonoBehaviour
 
         // normalized : 벡터의 길이를 1로 만들어주는 것 (즉, 방향만 유지한다.)
         Vector2 normalizedDirection = new Vector2(h, v).normalized;
-        _animator.SetInteger("x", (int)normalizedDirection.x);
+        _animator.SetInteger(XHash, (int)normalizedDirection.x);
 
         Vector2 newPosition = transform.position + (Vector3)(normalizedDirection * _speed) * Time.deltaTime;
         //Debug.Log($"h:{h}, v:{v}");
@@ -95,14 +97,14 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             // 키보드 E키를 누르면 스피드 Up!
+            //Debug.Log($"Speed 증가 : {Speed}");
             _speed++;
-            Debug.Log($"Speed 증가 : {Speed}");
         }
         else if (Input.GetKeyDown(KeyCode.Q))
         {
             // 키보드 Q키를 누르면 스피드 Down!
+            //Debug.Log($"Speed 감소 : {Speed}");
             _speed--;
-            Debug.Log($"Speed 감소 : {Speed}");
         }
     }
 

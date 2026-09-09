@@ -11,7 +11,6 @@ public class PlayerBomb : MonoBehaviour
     [SerializeField] private float _duration = 3f;
     [SerializeField] private float _coolTime = 10f;
     public float CoolTime => _coolTime;
-
     private float _countTime;
 
     private bool _isUsed;
@@ -19,7 +18,7 @@ public class PlayerBomb : MonoBehaviour
 
     private void Awake()
     {
-        _player = transform.gameObject.GetComponent<Player>();
+        _player = GetComponent<Player>();
     }
 
     private void Start()
