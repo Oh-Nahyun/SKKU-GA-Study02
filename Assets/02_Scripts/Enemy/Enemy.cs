@@ -7,7 +7,7 @@ public abstract class Enemy : MonoBehaviour
     public Animator _animator;
 
     // ToDo : 적이 공격 당할 때 재생시켜주는 피격 사운드 -> 완료
-    private AudioSource _damagedAudioSource;
+    public AudioSource _damagedAudioSource;
 
     [SerializeField] private int _health = 100;
     [SerializeField] private int _damage = 100;
@@ -37,6 +37,10 @@ public abstract class Enemy : MonoBehaviour
             Instantiate(_deathEffectPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject); // 너죽자! // collision.gameObject
             SpawnItem();
+        }
+        else
+        {
+            _damagedAudioSource.Play();
         }
     }
 
