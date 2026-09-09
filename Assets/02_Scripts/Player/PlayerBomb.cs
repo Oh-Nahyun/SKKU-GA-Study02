@@ -6,12 +6,16 @@ public class PlayerBomb : MonoBehaviour
 {
     private Player _player;
     public GameObject BombPrefab;
+    private GameObject _bombGameObject;
 
+    [SerializeField] private float _duration = 3f;
     [SerializeField] private float _coolTime = 10f;
     public float CoolTime => _coolTime;
+
     private float _countTime;
 
     private bool _isUsed;
+    private bool _isDestroyed;
 
     private void Awake()
     {
@@ -38,7 +42,7 @@ public class PlayerBomb : MonoBehaviour
         float y = UnityEngine.Random.Range(_player._playerMove.MaxPositionY, _player._playerMove.MinPositionY
         ) * (-1);
 
-        Instantiate(BombPrefab, new Vector3(x, y, 0f), Quaternion.identity);
+        _bombGameObject = Instantiate(BombPrefab, new Vector3(x, y, 0f), Quaternion.identity);
         _isUsed = true;
     }
 
@@ -48,15 +52,17 @@ public class PlayerBomb : MonoBehaviour
 
         _countTime += Time.deltaTime;
 
-        if (_countTime == 3f)
+        if (_countTime >= _duration && !_isDestroyed)
         {
-            Destroy(BombPrefab);
-            Debug.Log("---폭탄제거---");
+            //Debug.Log("---폭탄제거---");
+            Destroy(_bombGameObject);
+            _isDestroyed = true;
         }
 
         if (_countTime >= CoolTime)
         {
             _countTime = 0f;
+            _isDestroyed = false;
             _isUsed = false;
         }
     }
