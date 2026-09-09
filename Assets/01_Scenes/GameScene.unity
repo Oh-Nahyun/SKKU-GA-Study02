@@ -1534,7 +1534,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBomb
   BombPrefab: {fileID: 3424860774039663277, guid: 80579c5dbf9946849a4aa25a12d8c608, type: 3}
-  _coolTime: 5
+  _duration: 3
+  _coolTime: 10
 --- !u!1001 &1625166730
 PrefabInstance:
   m_ObjectHideFlags: 0
