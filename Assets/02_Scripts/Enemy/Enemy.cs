@@ -6,7 +6,7 @@ public abstract class Enemy : MonoBehaviour
 {
     public Animator _animator;
 
-    // ToDo : 적이 공격 당할 때 재생시켜주는 피격 사운드
+    // ToDo : 적이 공격 당할 때 재생시켜주는 피격 사운드 -> 완료
     private AudioSource _damagedAudioSource;
 
     [SerializeField] private int _health = 100;
@@ -31,7 +31,6 @@ public abstract class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         _health -= damage;
-        _damagedAudioSource.Play();
 
         if (_health <= 0)
         {

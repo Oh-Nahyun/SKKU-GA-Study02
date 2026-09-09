@@ -48,7 +48,7 @@ public abstract class Item : MonoBehaviour
     {
         if (!other.CompareTag("Player"))
         {
-            Debug.LogWarning("플레이어가 NULL 입니다.");
+            //Debug.LogWarning("플레이어가 NULL 입니다.");
             return;
         }
 
