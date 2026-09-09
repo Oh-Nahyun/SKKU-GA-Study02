@@ -14,7 +14,7 @@ public class PlayerBomb : MonoBehaviour
     private float _countTime;
 
     private bool _isUsed;
-    private bool _isDestroyed;
+    private bool _isExplosionEnd;
 
     private void Awake()
     {
@@ -42,7 +42,7 @@ public class PlayerBomb : MonoBehaviour
         ) * (-1);
 
         _bombGameObject = Instantiate(BombPrefab, new Vector3(x, y, 0f), Quaternion.identity);
-        _isDestroyed = false;
+        _isExplosionEnd = false;
         _isUsed = true;
     }
 
@@ -52,19 +52,19 @@ public class PlayerBomb : MonoBehaviour
 
         _countTime += Time.deltaTime;
 
-        if (_countTime >= _duration && !_isDestroyed)
+        if (_countTime >= _duration && !_isExplosionEnd)
         {
             //Debug.Log("---폭탄제거---");
             Bomb bomb = _bombGameObject.GetComponent<Bomb>();
             bomb.ChangeIsExplosion(false);
             Destroy(_bombGameObject);
-            _isDestroyed = true;
+            _isExplosionEnd = true;
         }
 
         if (_countTime >= CoolTime)
         {
             _countTime = 0f;
-            _isDestroyed = false;
+            _isExplosionEnd = false;
             _isUsed = false;
         }
     }
