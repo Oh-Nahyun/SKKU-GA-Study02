@@ -42,6 +42,7 @@ public class PlayerBomb : MonoBehaviour
         ) * (-1);
 
         _bombGameObject = Instantiate(BombPrefab, new Vector3(x, y, 0f), Quaternion.identity);
+        _isDestroyed = false;
         _isUsed = true;
     }
 
