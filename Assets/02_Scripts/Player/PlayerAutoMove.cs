@@ -56,7 +56,6 @@ public class PlayerAutoMove : MonoBehaviour
             if (enemy.transform.position.y < _stopTrackingY) continue;
 
             float distance = Vector3.Distance(transform.position, enemy.transform.position);
-            distance = Mathf.Abs(distance);
 
             if (minDistance > distance)
             {
