@@ -2006,6 +2006,7 @@ MonoBehaviour:
   FirePointFrontRight: {fileID: 1555706517}
   FirePointBackLeft: {fileID: 1630243911}
   FirePointBackRight: {fileID: 1269914548}
+  _isAutoMode: 1
 --- !u!50 &1606705506
 Rigidbody2D:
   serializedVersion: 5
@@ -2163,8 +2164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21433f90eb0bc6b43830132549c30c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAutoMove
-  MaxPositionY: -1
-  MinPositionY: -5
 --- !u!1 &1610541297
 GameObject:
   m_ObjectHideFlags: 0
