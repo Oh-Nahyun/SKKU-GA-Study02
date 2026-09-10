@@ -57,7 +57,7 @@ public class ScoreManager : MonoBehaviour
         _currentScore += score;
         if (_currentScore > _bestScore)
         {
-            _currentScore = _bestScore;
+            _bestScore = _currentScore;
 
             // 저장 : PlayerPrefs.Set~ 시리즈를 이용해 int/float/string을 저장 가능하다.
             // 내 컴퓨터 어딘가에 저장이 된다... (빈번한 저장은 렉 유발)
