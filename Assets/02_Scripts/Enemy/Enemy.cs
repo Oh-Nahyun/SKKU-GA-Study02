@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using Random = UnityEngine.Random;
 
 public abstract class Enemy : MonoBehaviour
@@ -36,8 +37,12 @@ public abstract class Enemy : MonoBehaviour
         {
             Instantiate(_deathEffectPrefab, transform.position, Quaternion.identity);
 
-            ScoreManager scoreManager = FindAnyObjectByType<ScoreManager>();
-            scoreManager.AddScore(100);
+            // 싱글톤 패턴
+            // 1. 전역적으로 접근 가능하다.
+            // 2. 인스턴스(생성된 객체)가 하나임을 보장한다.
+            //ScoreManager scoreManager = FindAnyObjectByType<ScoreManager>();
+            //scoreManager.AddScore(100);
+            ScoreManager.Instance.AddScore(100);
 
             Destroy(gameObject); // 너죽자! // collision.gameObject
             SpawnItem();
