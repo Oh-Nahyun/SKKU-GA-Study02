@@ -35,6 +35,10 @@ public abstract class Enemy : MonoBehaviour
         if (_health <= 0)
         {
             Instantiate(_deathEffectPrefab, transform.position, Quaternion.identity);
+
+            ScoreManager scoreManager = FindAnyObjectByType<ScoreManager>();
+            scoreManager.AddScore(100);
+
             Destroy(gameObject); // 너죽자! // collision.gameObject
             SpawnItem();
         }

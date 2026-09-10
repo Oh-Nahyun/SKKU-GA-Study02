@@ -14,7 +14,11 @@ public class PlayerAutoMove : MonoBehaviour
 
     private void Update()
     {
-        FindClosestEnemy(); //
+        if (_closestEnemy == null || _closestEnemy.transform.position.y < _stopTrackingY)
+        {
+            FindClosestEnemy();
+        }
+
         AutoMove();
     }
 
@@ -41,9 +45,6 @@ public class PlayerAutoMove : MonoBehaviour
 
     private void FindClosestEnemy()
     {
-        if (_closestEnemy != null) return;
-        if (_closestEnemy.transform.position.y > _stopTrackingY) return; //
-
         _enemies = GameObject.FindGameObjectsWithTag("Enemy");
         if (_enemies == null || _enemies.Length == 0) return;
 
