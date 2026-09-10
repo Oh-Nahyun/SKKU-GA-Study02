@@ -23,8 +23,8 @@ public class PlayerAutoMove : MonoBehaviour
         }
 
         Vector2 direction = _closestEnemy.transform.position - transform.position;
-        direction.Normalize();
         direction.y = 0f;
+        direction.Normalize();
         transform.Translate(direction * _speed * Time.deltaTime);
     }
 
