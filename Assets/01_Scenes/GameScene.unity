@@ -1885,6 +1885,7 @@ GameObject:
   - component: {fileID: 1606705509}
   - component: {fileID: 1606705510}
   - component: {fileID: 1606705511}
+  - component: {fileID: 1606705512}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1978,7 +1979,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1606705501}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c9e8660efc138141bdd2bacbf3af0fc, type: 3}
   m_Name: 
@@ -2150,6 +2151,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e822744301cfa4d93c989e9419d2cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AwakeTest
+--- !u!114 &1606705512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606705501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21433f90eb0bc6b43830132549c30c0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAutoMove
+  MaxPositionY: -1
+  MinPositionY: -5
 --- !u!1 &1610541297
 GameObject:
   m_ObjectHideFlags: 0
