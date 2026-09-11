@@ -13,7 +13,9 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] private int _health = 100;
     [SerializeField] private int _damage = 100;
     [SerializeField] protected float _moveSpeed = 1f;
-    [SerializeField] private Item[] _itemPrefabs = new Item[3];
+
+    [SerializeField] private ItemSpawnDataTableSO _itemSpawnDataTable;
+
     [SerializeField] private GameObject _deathEffectPrefab;
 
     private void Awake()
@@ -55,10 +57,32 @@ public abstract class Enemy : MonoBehaviour
 
     private void SpawnItem()
     {
-        // ToDO : Scriptable Object를 사용해서 리팩토링
-        if (Random.Range(0f, 1f) > 0.3f) return;
+        // ToDO : Scriptable Object를 사용해서 리팩토링 -> 완료
 
-        Instantiate(_itemPrefabs[Random.Range(0, _itemPrefabs.Length)], transform.position, transform.rotation);
+        // [1] 리팩토링 전 확률 코드 (퍼센트 기반)
+        // if (Random.Range(0f, 1f) > 0.3f) return;
+        // Instantiate(_itemPrefabs[Random.Range(0, _itemPrefabs.Length)], transform.position, transform.rotation);
+
+        // [2] Scriptable Object를 사용한 가중치 랜덤 선택 코드
+        int totalWeight = 0;
+        foreach (ItemSpawnData data in _itemSpawnDataTable.Datas)
+        {
+            totalWeight += data.Weight;
+        }
+
+        int randomWeight = Random.Range(0, totalWeight);
+
+        int cumulativeWeight = 0;
+        foreach (ItemSpawnData data in _itemSpawnDataTable.Datas)
+        {
+            cumulativeWeight += data.Weight;
+            if (randomWeight < cumulativeWeight)
+            {
+                GameObject item = Instantiate(data.ItemPrefab);
+                item.transform.position = transform.position;
+                break;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

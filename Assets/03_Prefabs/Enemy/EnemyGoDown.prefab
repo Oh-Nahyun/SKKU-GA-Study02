@@ -182,6 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyGoDown
   _animator: {fileID: 0}
+  _damagedAudioSource: {fileID: 0}
   _health: 100
   _damage: 20
   _moveSpeed: 1
@@ -189,6 +190,7 @@ MonoBehaviour:
   - {fileID: 8780371897059735729, guid: 01aabf69129d9774f971d158aa0c4477, type: 3}
   - {fileID: 2222169261210787571, guid: 9d05d963358e6114aa2f6ee47d2901eb, type: 3}
   - {fileID: 5074810320186522452, guid: c6dc4b2365b1c9c46a243d245dc9be14, type: 3}
+  _itemSpawnDataTable: {fileID: 11400000, guid: 7cabd68771cc3df4f9d455f1cd9e4fe1, type: 2}
   _deathEffectPrefab: {fileID: 2433282508537954060, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312, type: 3}
 --- !u!95 &9133216937840579803
 Animator:
