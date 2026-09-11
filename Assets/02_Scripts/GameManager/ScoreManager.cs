@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    // static(정적)
+    // 싱글톤 : static(정적)
     private static ScoreManager _instance = null;
     public static ScoreManager Instance => _instance;
 
