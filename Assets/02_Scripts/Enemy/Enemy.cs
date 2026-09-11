@@ -71,14 +71,15 @@ public abstract class Enemy : MonoBehaviour
         }
 
         int randomWeight = Random.Range(0, totalWeight);
-
         int cumulativeWeight = 0;
         foreach (ItemSpawnData data in _itemSpawnDataTable.Datas)
         {
             cumulativeWeight += data.Weight;
             if (randomWeight < cumulativeWeight)
             {
-                GameObject item = Instantiate(data.ItemPrefab);
+                //GameObject item = Instantiate(data.ItemPrefab);
+                Item item = data.ItemPrefab.GetComponent<Item>();
+                item = ItemPool.Instance.GetItem(item.Type);
                 item.transform.position = transform.position;
                 break;
             }

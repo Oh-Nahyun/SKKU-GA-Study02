@@ -16,7 +16,7 @@ public class BulletPool : MonoBehaviour
     [Header("총알 프리팹들")]
     [SerializeField] private Bullet[] _bulletPrefabs;
 
-    [Header("풀 사이즈")]
+    [Header("총알 풀 사이즈")]
     [SerializeField] private int _bulletPoolSize;
 
     // 생성한 총알을 담아둘 풀

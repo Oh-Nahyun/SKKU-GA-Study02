@@ -4,6 +4,10 @@ using UnityEngine;
 public abstract class Item : MonoBehaviour
 {
     private Player _player = null;
+
+    [SerializeField] private ItemType _type;
+    public ItemType Type => _type;
+
     [SerializeField] private float _moveSpeed = 7f;
     [SerializeField] private float _stopTime = 1f;
     private float _timer = 0;
@@ -54,6 +58,6 @@ public abstract class Item : MonoBehaviour
 
         Player player = other.GetComponent<Player>();
         Effect(player);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }
