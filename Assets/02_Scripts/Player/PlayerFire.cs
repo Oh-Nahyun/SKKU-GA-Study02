@@ -44,26 +44,24 @@ public class PlayerFire : MonoBehaviour
         // 1. 스페이스바를 누른다.
         if (!_isFired && ((!_isAutoMode && Input.GetKeyDown(KeyCode.Space)) || _isAutoMode))
         {
-            // TODO : 직접 생성이 아니라 총알 창고에서 총알 주라고 하기
+            // TODO : 직접 생성이 아니라 총알 창고에서 총알 주라고 하기 -> 완료
 
             // 2. 총알 프리팹을 생성한다.
             // Instantiate는 프리팹을 복사해서 (MonoBehaviour를 상속받는) 게임 오브젝트를 생성하고 씬에 넣어주는 기능
             //GameObject bulletFrontLeft = Instantiate(BulletFrontPrefab);
-            Bullet bulletFrontLeft = BulletPool.Instance.GetBullet();
-            bulletFrontLeft.transform.position = FirePointFrontLeft.position;
+            Bullet bulletFrontLeft = BulletPool.Instance.GetBullet(BulletType.Main);
+            bulletFrontLeft.transform.position = FirePointFrontLeft.position; // 생성한 총알의 위치를 총구의 위치로 이동
 
-            //GameObject bulletFrontRight = Instantiate(BulletFrontPrefab);
-            Bullet bulletFrontRight = BulletPool.Instance.GetBullet();
+            Bullet bulletFrontRight = BulletPool.Instance.GetBullet(BulletType.Main);
             bulletFrontRight.transform.position = FirePointFrontRight.position;
 
-            GameObject bulletBackLeft = Instantiate(BulletBackPrefab);
-            bulletBackLeft.transform.position = FirePointBackLeft.position; // 생성한 총알의 위치를 총구의 위치로 이동
+            Bullet bulletBackLeft = BulletPool.Instance.GetBullet(BulletType.Sub);
+            bulletBackLeft.transform.position = FirePointBackLeft.position;
 
-            GameObject bulletBackRight = Instantiate(BulletBackPrefab);
+            Bullet bulletBackRight = BulletPool.Instance.GetBullet(BulletType.Sub);
             bulletBackRight.transform.position = FirePointBackRight.position;
 
             _isFired = true;
-            // Debug.Log("총알 발사 완료!");
         }
     }
 

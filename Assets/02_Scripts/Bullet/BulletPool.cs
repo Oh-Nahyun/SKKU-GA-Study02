@@ -13,14 +13,14 @@ public class BulletPool : MonoBehaviour
     // 메모리 할당과(객체의 생성) 해제(파괴)를 최소화해서 성능 UP!
 
     // 필요 속성
-    [Header("총알 프리팹")]
-    [SerializeField] private Bullet _bulletPrefab;
+    [Header("총알 프리팹들")]
+    [SerializeField] private Bullet[] _bulletPrefabs;
 
     [Header("풀 사이즈")]
     [SerializeField] private int _bulletPoolSize;
 
     // 생성한 총알을 담아둘 풀
-    private Bullet[] _bulletPool;
+    private Bullet[,] _bulletPool;
 
     private void Awake()
     {
@@ -33,27 +33,42 @@ public class BulletPool : MonoBehaviour
         _instance = this;
 
         // 1. 창고를 창고 크기만큼 만든다.
-        _bulletPool = new Bullet[_bulletPoolSize];
+        _bulletPool = new Bullet[_bulletPrefabs.Length, _bulletPoolSize];
 
-        // 2. 창고 크기만큼 총알을 미리 만들어서 넣는다.
-        for (int i = 0; i < _bulletPoolSize; i++)
+        // 2. 총알 프리팹 종류와 창고 크기만큼 총알을 미리 만들어서 넣는다.
+        for (int i = 0; i < _bulletPrefabs.Length; i++) // [메인 총알 프리팹, 서브 총알 프리팹]
         {
-            Bullet bullet = Instantiate(_bulletPrefab, gameObject.transform);
-            bullet.gameObject.SetActive(false); // 3. 당장 사용하지 않기 때문에 비활성화 한다.
-            _bulletPool[i] = bullet;
+            Bullet bulletPrefab = _bulletPrefabs[i];
+
+            for (int j = 0; j < _bulletPoolSize; j++)
+            {
+                Bullet bullet = Instantiate(bulletPrefab, gameObject.transform);
+                bullet.gameObject.SetActive(false); // 3. 당장 사용하지 않기 때문에 비활성화 한다.
+                _bulletPool[i, j] = bullet;
+            }
         }
     }
 
-    public Bullet GetBullet()
+    public Bullet GetBullet(BulletType bulletType)
     {
-        foreach (Bullet bullet in _bulletPool)
+        for (int i = 0; i < _bulletPool.Length; i++) // 타입별로 순회 하면서...
         {
-            // 비활성화 되어있는 (즉, 누가 빌려가지 않은 총알 반환)
-            if (bullet.gameObject.activeSelf == false)
+            if (_bulletPool[i, 0].Type != bulletType) // 첫번째 요소의 타입이 내가 원하는게 아니라면 스킵
             {
-                bullet.gameObject.SetActive(true);
-                bullet.OnSpawn();
-                return bullet;
+                continue;
+            }
+
+            for (int j = 0; j < _bulletPoolSize; j++) // 원하는 타입의 배열 순회
+            {
+                Bullet bullet = _bulletPool[i, j];
+
+                // 비활성화 되어있는 (즉, 누가 빌려가지 않은 총알 반환)
+                if (bullet.gameObject.activeSelf == false)
+                {
+                    bullet.gameObject.SetActive(true);
+                    bullet.OnSpawn();
+                    return bullet;
+                }
             }
         }
 

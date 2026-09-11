@@ -7,6 +7,9 @@ public class Bullet : MonoBehaviour
 
     private AudioSource _audioSource;
 
+    [SerializeField] private BulletType _type;
+    public BulletType Type => _type;
+
     public int Damage = 35;
     public float MoveSpeed;
 
