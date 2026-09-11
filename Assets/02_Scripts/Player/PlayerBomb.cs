@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using Random = System.Random;
 
 public class PlayerBomb : MonoBehaviour
 {
@@ -36,9 +34,9 @@ public class PlayerBomb : MonoBehaviour
     {
         if (_isUsed || !Input.GetKeyDown(KeyCode.B)) return;
 
-        float x = UnityEngine.Random.Range(_player._playerMove.MinPositionX, _player._playerMove.MaxPositionX
+        float x = Random.Range(_player._playerMove.MinPositionX, _player._playerMove.MaxPositionX
         );
-        float y = UnityEngine.Random.Range(_player._playerMove.MaxPositionY, _player._playerMove.MinPositionY
+        float y = Random.Range(_player._playerMove.MaxPositionY, _player._playerMove.MinPositionY
         ) * (-1);
 
         _bombGameObject = Instantiate(BombPrefab, new Vector3(x, y, 0f), Quaternion.identity);
@@ -57,7 +55,7 @@ public class PlayerBomb : MonoBehaviour
             //Debug.Log("---폭탄제거---");
             Bomb bomb = _bombGameObject.GetComponent<Bomb>();
             bomb.ChangeIsExplosion(false);
-            Destroy(_bombGameObject);
+            Destroy(_bombGameObject, 0.13f);
             _isExplosionEnd = true;
         }
 
