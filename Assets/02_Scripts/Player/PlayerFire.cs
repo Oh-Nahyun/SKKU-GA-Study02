@@ -25,7 +25,12 @@ public class PlayerFire : MonoBehaviour
     private bool _isFired;
 
     // - 자동 모드 여부
-    public bool _isAutoMode;
+    private bool _isAutoMode;
+
+    public void SetAutoMode(bool auto)
+    {
+        _isAutoMode = auto;
+    }
 
     private void Start()
     {
