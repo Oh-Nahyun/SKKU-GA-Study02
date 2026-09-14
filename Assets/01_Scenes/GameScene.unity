@@ -157,7 +157,7 @@ MonoBehaviour:
   - {fileID: 2222169261210787571, guid: 9d05d963358e6114aa2f6ee47d2901eb, type: 3}
   - {fileID: 5074810320186522452, guid: c6dc4b2365b1c9c46a243d245dc9be14, type: 3}
   - {fileID: 8780371897059735729, guid: 01aabf69129d9774f971d158aa0c4477, type: 3}
-  _itemPoolSize: 50
+  _itemPoolSize: 100
 --- !u!4 &69868068
 Transform:
   m_ObjectHideFlags: 0
@@ -208,6 +208,10 @@ PrefabInstance:
     - target: {fileID: 5694631610831690501, guid: 18e61f4996dc43547a6bc952e893e94c, type: 3}
       propertyPath: _index
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5976201598419322776, guid: 18e61f4996dc43547a6bc952e893e94c, type: 3}
+      propertyPath: m_text
+      value: AP Lv.1
       objectReference: {fileID: 0}
     - target: {fileID: 6426103451437244473, guid: 18e61f4996dc43547a6bc952e893e94c, type: 3}
       propertyPath: m_Pivot.x
@@ -914,17 +918,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeManager
   _upgrades:
-  - _name: AttackPower
+  - _name: AP
     _defaultValue: 1
     _increaseValue: 1
     _defaultCost: 100
     _increaseCost: 1.1
-  - _name: AttackSpeed
+  - _name: AS
     _defaultValue: 0.1
     _increaseValue: 0.1
     _defaultCost: 1000
     _increaseCost: 1.2
-  - _name: MoveSpeed
+  - _name: MS
     _defaultValue: 0.1
     _increaseValue: 0.1
     _defaultCost: 1000
@@ -2500,7 +2504,7 @@ MonoBehaviour:
   - {fileID: 68546179424606841, guid: 2f7f85a8593f0ad44b3a5c0d39901b65, type: 3}
   - {fileID: 3955620776465046074, guid: f2189e98f6e5619408fb6bc9b364edeb, type: 3}
   - {fileID: 3884943240946808400, guid: d05dbfb7637f4584286d456da050e416, type: 3}
-  _enemyPoolSize: 50
+  _enemyPoolSize: 100
 --- !u!4 &1413139542
 Transform:
   m_ObjectHideFlags: 0
@@ -3185,10 +3189,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5694631610831690501, guid: 18e61f4996dc43547a6bc952e893e94c, type: 3}
-      propertyPath: _index
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6426103451437244473, guid: 18e61f4996dc43547a6bc952e893e94c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3841,7 +3841,7 @@ MonoBehaviour:
   _bulletPrefabs:
   - {fileID: 2592371105100732929, guid: 0f3a9f5d65093b54f9dfe737b7be4479, type: 3}
   - {fileID: 2592371105100732929, guid: d96d67363e89e4d44b6734d0f37007c0, type: 3}
-  _bulletPoolSize: 50
+  _bulletPoolSize: 100
 --- !u!4 &2043329960
 Transform:
   m_ObjectHideFlags: 0
@@ -4015,6 +4015,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5976201598419322776, guid: 18e61f4996dc43547a6bc952e893e94c, type: 3}
+      propertyPath: m_text
+      value: AP Lv.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6426103451437244473, guid: 18e61f4996dc43547a6bc952e893e94c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4154,7 +4158,7 @@ SceneRoots:
   - {fileID: 648118108}
   - {fileID: 771328086}
   - {fileID: 1954442851}
+  - {fileID: 436391837}
   - {fileID: 2043329960}
   - {fileID: 69868068}
   - {fileID: 1413139542}
-  - {fileID: 436391837}
