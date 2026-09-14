@@ -7,6 +7,9 @@ public abstract class Enemy : MonoBehaviour
 {
     public Animator _animator;
 
+    [SerializeField] private EnemyType _type;
+    public EnemyType Type => _type;
+
     // ToDo : 적이 공격 당할 때 재생시켜주는 피격 사운드 -> 완료
     public AudioSource _damagedAudioSource;
 
@@ -46,7 +49,8 @@ public abstract class Enemy : MonoBehaviour
             //scoreManager.AddScore(100);
             ScoreManager.Instance.AddScore(100);
 
-            Destroy(gameObject); // 너죽자! // collision.gameObject
+            //Destroy(gameObject); // 너죽자! // collision.gameObject
+            gameObject.SetActive(false);
             SpawnItem();
         }
         else
@@ -93,11 +97,11 @@ public abstract class Enemy : MonoBehaviour
         Player player = other.GetComponent<Player>();
         if (player == null)
         {
-            Debug.LogWarning("플레이어가 NULL 입니다.");
+            //Debug.LogWarning("플레이어가 NULL 입니다.");
             return;
         }
 
         player.TakeDamage(_damage);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

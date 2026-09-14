@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -28,11 +27,11 @@ public class EnemySpawner : MonoBehaviour
             _timer = 0;
             _spawnInterval = Random.Range(1f, 3f); // float : 1 ~ 3 // UnityEngine의 Random.Range
             //int randomInt = Random.Range(1, 3); // int : 1 ~ 2
-            Spawn();
+            SpawnEnemy();
         }
     }
 
-    private void Spawn()
+    private void SpawnEnemy()
     {
         // ToDO : Scriptable Object를 사용해서 리팩토링 -> 완료
         // 이유 1 : 배열을 사용했지만 각 아이템이 어떤 프리팹인지 알 수 없음
@@ -81,7 +80,9 @@ public class EnemySpawner : MonoBehaviour
             cumulativeWeight += data.Weight; // 누적
             if (randomWeight < cumulativeWeight) // 구간
             {
-                GameObject enemy = Instantiate(data.EnemyPrefab);
+                //GameObject enemy = Instantiate(data.EnemyPrefab);
+                Enemy enemy = data.EnemyPrefab.GetComponent<Enemy>();
+                enemy = EnemyPool.Instance.GetEnemy(enemy.Type);
                 enemy.transform.position = transform.position;
                 break;
             }
