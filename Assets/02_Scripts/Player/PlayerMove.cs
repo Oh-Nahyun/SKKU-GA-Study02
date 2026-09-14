@@ -64,7 +64,8 @@ public class PlayerMove : MonoBehaviour
         Vector2 normalizedDirection = new Vector2(h, v).normalized;
         _animator.SetInteger(XHash, (int)normalizedDirection.x);
 
-        Vector2 newPosition = transform.position + (Vector3)(normalizedDirection * _speed) * Time.deltaTime;
+        float finalSpeed = _speed + UpgradeManager.Instance.Upgrades[2].CurrentValue;
+        Vector2 newPosition = transform.position + (Vector3)(normalizedDirection * finalSpeed) * Time.deltaTime;
         //Debug.Log($"h:{h}, v:{v}");
 
         // [실습 1] 이미지와 같이 빨간색 영역 안에서만 캐릭터가 이동할 수 있게 구현

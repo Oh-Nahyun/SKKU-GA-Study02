@@ -96,6 +96,7 @@ public class PlayerFire : MonoBehaviour
 
     public void IncreaseFireSpeed(float fireSpeedIncrease)
     {
-        _coolTime -= fireSpeedIncrease;
+        float finalFireRate = fireSpeedIncrease + UpgradeManager.Instance.Upgrades[1].CurrentValue;
+        _coolTime -= finalFireRate;
     }
 }

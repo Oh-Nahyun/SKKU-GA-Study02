@@ -40,7 +40,8 @@ public class PlayerAutoMove : MonoBehaviour
         }
 
         direction.Normalize();
-        transform.Translate(direction * _speed * Time.deltaTime);
+        float finalSpeed = _speed + UpgradeManager.Instance.Upgrades[2].CurrentValue;
+        transform.Translate(direction * finalSpeed * Time.deltaTime);
     }
 
     private void FindClosestEnemy()

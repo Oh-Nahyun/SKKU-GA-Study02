@@ -924,8 +924,8 @@ MonoBehaviour:
     _defaultCost: 100
     _increaseCost: 1.1
   - _name: AS
-    _defaultValue: 0.1
-    _increaseValue: 0.1
+    _defaultValue: 0.005
+    _increaseValue: 0.005
     _defaultCost: 1000
     _increaseCost: 1.2
   - _name: MS
@@ -4013,6 +4013,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5391773176922745062, guid: 18e61f4996dc43547a6bc952e893e94c, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5694631610831690501, guid: 18e61f4996dc43547a6bc952e893e94c, type: 3}
+      propertyPath: _index
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5976201598419322776, guid: 18e61f4996dc43547a6bc952e893e94c, type: 3}
