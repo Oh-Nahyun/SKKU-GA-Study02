@@ -39,7 +39,7 @@ public class ItemPool : MonoBehaviour
 
     public Item GetItem(ItemType itemType)
     {
-        for (int i = 0; i < _itemPool.Length; i++)
+        for (int i = 0; i < _itemPool.GetLength(0); i++)
         {
             if (_itemPool[i, 0].Type != itemType)
             {

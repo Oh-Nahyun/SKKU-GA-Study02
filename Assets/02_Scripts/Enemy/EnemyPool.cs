@@ -38,7 +38,7 @@ public class EnemyPool : MonoBehaviour
 
     public Enemy GetEnemy(EnemyType enemyType)
     {
-        for (int i = 0; i < _enemyPool.Length; i++)
+        for (int i = 0; i < _enemyPool.GetLength(0); i++)
         {
             if (_enemyPool[i, 0].Type != enemyType)
             {
