@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
@@ -33,7 +32,6 @@ public class UpgradeManager : MonoBehaviour
     public void LevelUp(int index)
     {
         _upgrades[index].LevelUp();
-
         RefreshUI();
     }
 

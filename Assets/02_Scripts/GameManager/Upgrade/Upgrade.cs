@@ -37,12 +37,12 @@ public class Upgrade
         Calculate();
     }
 
-    public void Calculate()
+    private void Calculate()
     {
         // Value : 기본값 + 레벨 * 증가량
         // Cost : 기본 점수 + 증가량 점수 ^ 레벨   
         _currentValue = _defaultValue + _level * _increaseValue;
-        _nextValue = _currentValue + _increaseValue;
+        _nextValue = _defaultValue + (_level + 1) * _increaseValue;
         _cost = (int)(_defaultCost + Mathf.Pow(_increaseCost, _level));
     }
 }

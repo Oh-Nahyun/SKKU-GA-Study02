@@ -157,7 +157,7 @@ MonoBehaviour:
   - {fileID: 2222169261210787571, guid: 9d05d963358e6114aa2f6ee47d2901eb, type: 3}
   - {fileID: 5074810320186522452, guid: c6dc4b2365b1c9c46a243d245dc9be14, type: 3}
   - {fileID: 8780371897059735729, guid: 01aabf69129d9774f971d158aa0c4477, type: 3}
-  _itemPoolSize: 20
+  _itemPoolSize: 50
 --- !u!4 &69868068
 Transform:
   m_ObjectHideFlags: 0
@@ -2500,7 +2500,7 @@ MonoBehaviour:
   - {fileID: 68546179424606841, guid: 2f7f85a8593f0ad44b3a5c0d39901b65, type: 3}
   - {fileID: 3955620776465046074, guid: f2189e98f6e5619408fb6bc9b364edeb, type: 3}
   - {fileID: 3884943240946808400, guid: d05dbfb7637f4584286d456da050e416, type: 3}
-  _enemyPoolSize: 30
+  _enemyPoolSize: 50
 --- !u!4 &1413139542
 Transform:
   m_ObjectHideFlags: 0
@@ -3841,7 +3841,7 @@ MonoBehaviour:
   _bulletPrefabs:
   - {fileID: 2592371105100732929, guid: 0f3a9f5d65093b54f9dfe737b7be4479, type: 3}
   - {fileID: 2592371105100732929, guid: d96d67363e89e4d44b6734d0f37007c0, type: 3}
-  _bulletPoolSize: 30
+  _bulletPoolSize: 50
 --- !u!4 &2043329960
 Transform:
   m_ObjectHideFlags: 0
