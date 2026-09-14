@@ -38,7 +38,7 @@ public class UpgradeManager : MonoBehaviour
             return;
         }
 
-        ScoreManager.Instance.Spend(upgrade.Cost);
+        ScoreManager.Instance.SpendScore(upgrade.Cost);
         
         _upgrades[index].LevelUp();
         RefreshUI();

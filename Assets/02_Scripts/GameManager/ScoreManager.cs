@@ -43,7 +43,7 @@ public class ScoreManager : MonoBehaviour
         // [방안 2]
         _bestScore = PlayerPrefs.GetInt(SaveKey, 0);
 
-        Refresh();
+        RefreshScore();
     }
 
     public int GetScore()
@@ -66,16 +66,16 @@ public class ScoreManager : MonoBehaviour
             PlayerPrefs.Save();
         }
 
-        Refresh();
+        RefreshScore();
     }
     
-    public void Spend(int amount)
+    public void SpendScore(int amount)
     {
         _currentScore -= amount;
-        Refresh();
+        RefreshScore();
     }
 
-    private void Refresh()
+    private void RefreshScore()
     {
         _bestScoreTextUI.text = $"Best Score : {_bestScore:N0}";
         _currentScoreTextUI.text = $"Current Score : {_currentScore:N0}";
