@@ -31,6 +31,12 @@ public class Upgrade
         Calculate();
     }
 
+    public void SetLevel(int level)
+    {
+        _level = level;
+        Calculate();
+    }
+
     public void LevelUp()
     {
         _level += 1;
