@@ -32,7 +32,8 @@ public class PlayerBomb : MonoBehaviour
 
     private void PlantBomb()
     {
-        if (_isUsed || !Input.GetKeyDown(KeyCode.B)) return;
+        // if (_isUsed || !Input.GetKeyDown(KeyCode.B)) return;
+        if (_isUsed || !SimpleInput.GetButton("Bomb")) return;
 
         float x = Random.Range(_player._playerMove.MinPositionX, _player._playerMove.MaxPositionX
         );
