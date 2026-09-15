@@ -12,6 +12,7 @@ public class ScoreManager : MonoBehaviour
     private int _bestScore;
     private int _currentScore;
     public int Score => _currentScore;
+    public int BestScore => _bestScore;
 
     private const string SaveKey = "BestScore";
 

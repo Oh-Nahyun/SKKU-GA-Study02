@@ -7,7 +7,8 @@ public class EnemySpawner : MonoBehaviour
 {
     // 필요 속성
     [SerializeField] private EnemySpawnDataTableSO _enemySpawnDataTable;
-
+    [SerializeField] private EnemyBalanceDataTableSO _enemyBalanceDataTable;
+    
     // - 타이머
     //[Header("스폰간격")][SerializeField] private float _spawnInterval = 3f;
     [SerializeField] private float _spawnInterval = 3f;
@@ -84,8 +85,25 @@ public class EnemySpawner : MonoBehaviour
                 Enemy enemy = data.EnemyPrefab.GetComponent<Enemy>();
                 enemy = EnemyPool.Instance.GetEnemy(enemy.Type);
                 enemy.transform.position = transform.position;
+                enemy.SetHealthBalance(GetHealthMultiplier());
                 break;
             }
         }
+    }
+
+    private float GetHealthMultiplier()
+    {
+        int bestScore = ScoreManager.Instance.BestScore;
+        foreach (EnemyBalanceData data in _enemyBalanceDataTable.Datas)
+        {
+            if (bestScore < data.RequiredScore)
+            {
+                return data.HealthMultiplier;
+            }
+        }
+        
+        // 없다면 제일 마지막 값 반환
+        int lastIndex = _enemyBalanceDataTable.Datas.Length - 1;
+        return _enemyBalanceDataTable.Datas[lastIndex].HealthMultiplier;
     }
 }

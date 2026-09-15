@@ -184,6 +184,7 @@ MonoBehaviour:
   _animator: {fileID: 0}
   _type: 1
   _damagedAudioSource: {fileID: 0}
+  _baseHealth: 100
   _health: 100
   _damage: 10
   _moveSpeed: 1.5

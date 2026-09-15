@@ -2306,6 +2306,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: c5e64413d2cb2b14b83d25cd91309b50, type: 2}
     - target: {fileID: 5834065504748687635, guid: affe7132d82f9144baf86af97b64731a, type: 3}
+      propertyPath: _enemyBalanceDataTable
+      value: 
+      objectReference: {fileID: 11400000, guid: d9233cbbcae815e4f84054eb4673bd8d, type: 2}
+    - target: {fileID: 5834065504748687635, guid: affe7132d82f9144baf86af97b64731a, type: 3}
       propertyPath: _spawnDatas.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -3069,6 +3073,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5834065504748687635, guid: affe7132d82f9144baf86af97b64731a, type: 3}
+      propertyPath: _enemyBalanceDataTable
+      value: 
+      objectReference: {fileID: 11400000, guid: d9233cbbcae815e4f84054eb4673bd8d, type: 2}
     - target: {fileID: 6594693784887136104, guid: affe7132d82f9144baf86af97b64731a, type: 3}
       propertyPath: m_Name
       value: EnemySpawner_Right
@@ -3922,6 +3930,10 @@ PrefabInstance:
       propertyPath: _enemySpawnDataTable
       value: 
       objectReference: {fileID: 11400000, guid: c5e64413d2cb2b14b83d25cd91309b50, type: 2}
+    - target: {fileID: 5834065504748687635, guid: affe7132d82f9144baf86af97b64731a, type: 3}
+      propertyPath: _enemyBalanceDataTable
+      value: 
+      objectReference: {fileID: 11400000, guid: d9233cbbcae815e4f84054eb4673bd8d, type: 2}
     - target: {fileID: 5834065504748687635, guid: affe7132d82f9144baf86af97b64731a, type: 3}
       propertyPath: _spawnDatas.Array.size
       value: 3
